@@ -125,34 +125,135 @@
       <h2 class="reveal" style="text-align: center; margin-bottom: 2rem;">Quick Reference Card</h2>
 
       <div class="template-box reveal" style="max-width: 700px;">
-        <h3 style="margin-bottom: 1.5rem; text-align: center;">The 5 Things AI Needs</h3>
+        <h3 style="margin-bottom: 1.5rem; text-align: center;">The 6 Questions AI Needs You To Answer</h3>
 
-        <div style="font-family: var(--font-sketch); font-size: 1.2rem;">
+        <div style="font-family: var(--font-sketch); font-size: 1.15rem;">
           <p style="margin-bottom: 1rem;">
-            <strong style="color: var(--marker-blue);">1. Clear Problem Statement</strong><br>
-            What pain are you solving? Be specific!
+            <strong style="color: var(--marker-blue);">1. PROBLEM</strong> — "What's the pain?"<br>
+            <span style="opacity: 0.8;">Be specific about what's broken today.</span>
           </p>
 
           <p style="margin-bottom: 1rem;">
-            <strong style="color: var(--marker-blue);">2. Small Pieces (Modules)</strong><br>
-            Break it into independent chunks.
+            <strong style="color: var(--marker-blue);">2. SUCCESS</strong> — "What does done look like?"<br>
+            <span style="opacity: 0.8;">How will you know it's working?</span>
           </p>
 
           <p style="margin-bottom: 1rem;">
-            <strong style="color: var(--marker-blue);">3. Inputs & Outputs</strong><br>
-            What goes in? What comes out?
+            <strong style="color: var(--marker-green);">3. BOUNDARIES</strong> — "What's NOT included?"<br>
+            <span style="opacity: 0.8;">This stops scope creep. Define phase 2 later.</span>
           </p>
 
           <p style="margin-bottom: 1rem;">
-            <strong style="color: var(--marker-blue);">4. Build Order</strong><br>
-            Safety first, features later. Number them.
+            <strong style="color: var(--marker-blue);">4. PIECES</strong> — "What are the parts?"<br>
+            <span style="opacity: 0.8;">Break it into smaller chunks.</span>
+          </p>
+
+          <p style="margin-bottom: 1rem;">
+            <strong style="color: var(--marker-blue);">5. ORDER</strong> — "What must work first?"<br>
+            <span style="opacity: 0.8;">Number them. Build foundations before features.</span>
           </p>
 
           <p>
-            <strong style="color: var(--marker-blue);">5. Verification</strong><br>
-            How do you know it worked?
+            <strong style="color: var(--marker-blue);">6. TEST</strong> — "How do we prove it works?"<br>
+            <span style="opacity: 0.8;">For each piece, what's a specific example?</span>
           </p>
         </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Tips & Best Practices -->
+  <section id="tips">
+    <div class="container">
+      <h2 class="reveal" style="text-align: center; margin-bottom: 1rem;">Tips & Best Practices</h2>
+      <p class="handwriting reveal" style="text-align: center; font-size: 1.3rem; margin-bottom: 2rem; color: var(--marker-blue);">
+        Collected wisdom from the trenches
+      </p>
+
+      <div style="max-width: 800px; margin: 0 auto;">
+        <!-- Prompting Tips -->
+        <div class="hand-drawn-box reveal" style="margin-bottom: 1.5rem;">
+          <h3 style="color: var(--marker-green); margin-bottom: 1rem;">🗣️ Prompting Tips</h3>
+          <ul style="font-family: var(--font-sketch); font-size: 1.15rem; list-style: none; padding: 0;">
+            <li style="margin-bottom: 0.8rem;">✓ <strong>Be specific</strong> — "Add a blue button" beats "make it look better"</li>
+            <li style="margin-bottom: 0.8rem;">✓ <strong>Give context</strong> — Tell AI what the system does, not just what you want right now</li>
+            <li style="margin-bottom: 0.8rem;">✓ <strong>One thing at a time</strong> — Don't ask for 5 changes in one prompt</li>
+            <li style="margin-bottom: 0.8rem;">✓ <strong>Show examples</strong> — "Like this:" followed by an example beats a long explanation</li>
+            <li>✓ <strong>Say what you DON'T want</strong> — "Don't change the header" saves backtracking</li>
+          </ul>
+        </div>
+
+        <!-- Planning Tips -->
+        <div class="hand-drawn-box reveal" style="margin-bottom: 1.5rem;">
+          <h3 style="color: var(--marker-blue); margin-bottom: 1rem;">📋 Planning Tips</h3>
+          <ul style="font-family: var(--font-sketch); font-size: 1.15rem; list-style: none; padding: 0;">
+            <li style="margin-bottom: 0.8rem;">✓ <strong>Start embarrassingly small</strong> — Your v1 should almost feel too simple</li>
+            <li style="margin-bottom: 0.8rem;">✓ <strong>Write it down</strong> — Keep a doc of decisions. AI forgets, docs don't.</li>
+            <li style="margin-bottom: 0.8rem;">✓ <strong>Define "not in scope"</strong> — What you WON'T do is as important as what you will</li>
+            <li style="margin-bottom: 0.8rem;">✓ <strong>Build foundations first</strong> — Get core working before adding features</li>
+            <li>✓ <strong>Test as you go</strong> — Don't build three things then test. Build one, test, repeat.</li>
+          </ul>
+        </div>
+
+        <!-- Tool Tips -->
+        <div class="hand-drawn-box reveal">
+          <h3 style="color: var(--marker-orange); margin-bottom: 1rem;">🔧 Tool Tips</h3>
+          <ul style="font-family: var(--font-sketch); font-size: 1.15rem; list-style: none; padding: 0;">
+            <li style="margin-bottom: 0.8rem;">✓ <strong>Avoid copy-paste</strong> — Tools like Claude Code, Cursor work directly in your codebase</li>
+            <li style="margin-bottom: 0.8rem;">✓ <strong>Use version control</strong> — Git lets you undo mistakes. Use it from day 1.</li>
+            <li style="margin-bottom: 0.8rem;">✓ <strong>Start with Replit</strong> — No setup needed. Great for first experiments.</li>
+            <li style="margin-bottom: 0.8rem;">✓ <strong>Try multiple tools</strong> — Different tools for different jobs. Explore.</li>
+            <li>✓ <strong>Read the errors</strong> — AI can explain error messages. Just paste them.</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- When Things Go Wrong -->
+  <section id="troubleshooting">
+    <div class="container">
+      <h2 class="reveal" style="text-align: center; margin-bottom: 1rem;">When Things Go Wrong</h2>
+      <p class="handwriting reveal" style="text-align: center; font-size: 1.3rem; margin-bottom: 2rem; color: var(--marker-red);">
+        Because they will. Here's how to recover.
+      </p>
+
+      <div style="max-width: 700px; margin: 0 auto;">
+        <div style="background: #fef2f2; border-left: 4px solid var(--marker-red); padding: 1rem 1.5rem; margin-bottom: 1rem; border-radius: 0 8px 8px 0;" class="reveal">
+          <h4 style="color: var(--marker-red); font-family: var(--font-headline); margin-bottom: 0.5rem;">"It's not working and I don't know why"</h4>
+          <p class="handwriting" style="font-size: 1.1rem;">Stop. Read the error message. Ask AI: "What does this error mean?" Start there.</p>
+        </div>
+
+        <div style="background: #fef2f2; border-left: 4px solid var(--marker-red); padding: 1rem 1.5rem; margin-bottom: 1rem; border-radius: 0 8px 8px 0;" class="reveal">
+          <h4 style="color: var(--marker-red); font-family: var(--font-headline); margin-bottom: 0.5rem;">"I added a feature and now everything's broken"</h4>
+          <p class="handwriting" style="font-size: 1.1rem;">Undo the last change. Git helps here. If no Git, start fresh from your last working version.</p>
+        </div>
+
+        <div style="background: #fef2f2; border-left: 4px solid var(--marker-red); padding: 1rem 1.5rem; margin-bottom: 1rem; border-radius: 0 8px 8px 0;" class="reveal">
+          <h4 style="color: var(--marker-red); font-family: var(--font-headline); margin-bottom: 0.5rem;">"AI keeps giving me different answers"</h4>
+          <p class="handwriting" style="font-size: 1.1rem;">Be more specific. Give more context. Share what you've already tried and why it failed.</p>
+        </div>
+
+        <div style="background: #fef2f2; border-left: 4px solid var(--marker-red); padding: 1rem 1.5rem; margin-bottom: 1rem; border-radius: 0 8px 8px 0;" class="reveal">
+          <h4 style="color: var(--marker-red); font-family: var(--font-headline); margin-bottom: 0.5rem;">"I'm too deep to start over but it's a mess"</h4>
+          <p class="handwriting" style="font-size: 1.1rem;">Stop adding features. Stabilize what you have. Sometimes "done" beats "perfect."</p>
+        </div>
+
+        <div style="background: #fef2f2; border-left: 4px solid var(--marker-red); padding: 1rem 1.5rem; margin-bottom: 1rem; border-radius: 0 8px 8px 0;" class="reveal">
+          <h4 style="color: var(--marker-red); font-family: var(--font-headline); margin-bottom: 0.5rem;">"AI forgot what we agreed earlier"</h4>
+          <p class="handwriting" style="font-size: 1.1rem;">This is normal. Keep a doc of decisions. Paste the relevant context when starting new chats.</p>
+        </div>
+
+        <div style="background: #fef2f2; border-left: 4px solid var(--marker-red); padding: 1rem 1.5rem; border-radius: 0 8px 8px 0;" class="reveal">
+          <h4 style="color: var(--marker-red); font-family: var(--font-headline); margin-bottom: 0.5rem;">"I'm frustrated and want to quit"</h4>
+          <p class="handwriting" style="font-size: 1.1rem;">Step away. Seriously. Fresh eyes tomorrow solve problems that 2 more hours won't.</p>
+        </div>
+      </div>
+
+      <div class="sticky-note green reveal" style="margin: 2rem auto; max-width: 500px; text-align: center;">
+        <p style="font-size: 1.3rem;">
+          <strong>The secret:</strong> Everyone hits these walls. The difference is knowing when to push through vs. when to step back and rethink.
+        </p>
       </div>
     </div>
   </section>
@@ -167,15 +268,15 @@
 
       <div class="sticky-note green reveal" style="margin: 2rem auto; max-width: 500px;">
         <p style="font-size: 1.5rem;">
-          You're not learning to code.<br>
-          You're learning to <strong>communicate with AI</strong>.
+          The barrier to building has never been lower.<br>
+          <strong>Go explore.</strong>
         </p>
       </div>
 
       <div class="transformation reveal" style="margin: 3rem 0;">
         <div class="before-after" style="max-width: 400px; margin: 0 auto;">
-          <div class="before" style="font-size: 1.2rem;">"I Can't"</div>
-          <div class="after" style="font-size: 2.5rem;">I'M BUILDING</div>
+          <div class="before" style="font-size: 1.2rem;">"What if I break it?"</div>
+          <div class="after" style="font-size: 2.5rem;">THAT'S HOW YOU LEARN</div>
         </div>
       </div>
 
@@ -202,7 +303,7 @@
   <footer class="footer">
     <p>Session 2: The Art of Planning | AI Hackathon Training Program</p>
     <p style="margin-top: 0.5rem; opacity: 0.7;">
-      Built with AI to show that non-coders can ship!
+      Questions? Ideas? Reach out to Longy
     </p>
   </footer>
 
