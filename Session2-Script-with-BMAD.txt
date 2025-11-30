@@ -1,0 +1,744 @@
+================================================================================
+SESSION 2: THE ART OF PLANNING
+How I Stopped Fighting AI and Started Shipping
+================================================================================
+
+A 60-Minute Journey from "I Can't" to "I'm Building"
+Complete Presentation Script & Stage Directions
+Presenter: Longy
+
+REVISED VERSION — Includes BMAD Method Video & Demo
+
+
+================================================================================
+THE NARRATIVE ARC
+================================================================================
+
+"There's a new kind of coding I call 'vibe coding', where you fully give in 
+to the vibes, embrace exponentials, and forget that the code even exists."
+                                        — Andrej Karpathy, Co-founder of OpenAI
+                                          February 2025
+
+This session is your hero's journey. You walk in thinking "I'm not technical 
+enough." You walk out knowing the secret: the people shipping with AI aren't 
+better coders—they're better planners.
+
+THE FOUR ACTS
+--------------------------------------------------------------------------------
+1. ACT 1 — I Was You (0:00–13:00)
+   The confession, the crash, the 20-hour nightmare
+
+2. ACT 2 — What AI Actually Needs (13:00–28:00)
+   The revelation, the framework, the mindset shift
+
+3. ACT 2.5 — BMAD Method: Planning in Action (28:00–40:00) *** NEW ***
+   Video introduction + Demo recap
+
+4. ACT 3 — You Becoming Builders (40:00–60:00)
+   The proof, the practice, the transformation
+
+
+================================================================================
+ACT 1: I WAS YOU
+================================================================================
+
+0:00–5:00 | THE HOOK
+--------------------------------------------------------------------------------
+
+ON SCREEN:
+Single slide. Black background. White text, slowly fading in:
+"Six months ago, I was terrified of this."
+
+YOU SAY:
+
+"Hi everyone. I'm Longy.
+
+I want to start with a confession. Not a humble-brag confession. A real one.
+
+Six months ago, if you'd asked me to build something with AI, I would have 
+smiled politely and thought: 'That's for the technical people. I'll wait 
+for IT.'
+
+I wasn't just nervous. I was convinced there was something fundamentally 
+different about people who could make software—some gene I didn't have.
+
+[Pause. Let that land.]
+
+Then I discovered something that changed everything. Not a secret tool. 
+Not a hack. A mindset shift.
+
+And today, I'm going to give you that same shift in the next 55 minutes.
+
+By the end of this session, you won't be a programmer. But you'll understand 
+why that doesn't matter anymore."
+
+
+ENGAGEMENT MOMENT:
+[Show a quick poll on screen or ask for hands:]
+
+"Quick temperature check. One word in the chat—or just shout it out—how do 
+you feel about building something with AI right now?
+
+Excited? Curious? Skeptical? Terrified? All valid."
+
+[React to 2-3 responses. Normalise the nerves. 'Terrified is exactly where 
+I was.']
+
+
+BRIDGE FROM SESSION 1:
+
+"In Session 1, you learned what AI can do—and more importantly, what it can't. 
+You learned about context windows, about how AI has no memory between sessions, 
+about the 'brilliant intern who read the internet but knows nothing about your 
+company.'
+
+Session 2 is the missing piece: how do you actually work with that brilliant, 
+forgetful intern without losing your mind?
+
+The answer isn't 'become a developer.' The answer is 'become a planner.'"
+
+
+--------------------------------------------------------------------------------
+5:00–13:00 | THE DISASTER STORY
+--------------------------------------------------------------------------------
+
+ON SCREEN:
+Visual timeline appears—horizontal, clean, 5 stages:
+Excitement → Frustration → Bug-fix Hell → Breakthrough → Clarity
+First stage (Excitement) is highlighted. The others are greyed out.
+
+YOU SAY:
+
+"Let me tell you about the project that broke me. And then rebuilt me.
+
+The Banking Communication System.
+
+The idea was beautiful: take those boring standardised bank letters—you know 
+the ones, dense paragraphs nobody reads—and transform them into personalised 
+digital voice notes. Customers could actually hear their updates instead of 
+decoding legal jargon.
+
+I was buzzing. I had AI tools. I had ambition. How hard could it be?"
+
+
+STAGE 1: EXCITEMENT
+[Timeline: 'Excitement' stage glows]
+
+"Day one. I open Claude's web interface. I describe the whole system in one 
+massive prompt. 'Build me this. Make it do that. Include safety checks. 
+Handle edge cases.'
+
+And the AI starts generating code. Beautiful, flowing code. I copy it into 
+my editor. It works!
+
+Well... parts of it work. But I'm excited. This is amazing. I'm going to 
+ship this in a weekend."
+
+
+STAGE 2: FRUSTRATION
+[Timeline: Move to 'Frustration']
+
+"Day two. The file is now 500 lines. Then 700. Then 1,000.
+
+I'm copying code from the web chat, pasting it into VS Code. Back and forth. 
+Copy. Paste. Copy. Paste. Like it's 1998.
+
+I fix one bug... and three more appear. The AI starts contradicting itself. 
+'Earlier you said X, now you're saying Y.'
+
+I'm spending more time debugging than building."
+
+
+STAGE 3: BUG-FIX HELL
+[Timeline: 'Bug-fix Hell' pulses red]
+
+"Then I remember: this thing needs a safety check. AI can hallucinate. It 
+might generate voice notes that say completely wrong things.
+
+So I ask the AI to add a 'hallucination detector' at the end.
+
+But the codebase is already 1,000 lines of tangled spaghetti. Adding safety 
+means ripping apart everything I've built.
+
+Every change breaks something else. I'm 20 hours in. I've shipped nothing. 
+And I'm starting to think: 'Maybe I'm just not technical enough for this.'"
+
+[Pause. Look at audience.]
+
+"Anyone here ever had that thought? 'Maybe this just isn't for me'?"
+
+[Wait for nods, reactions. Acknowledge them.]
+
+
+THE DIAGNOSIS:
+
+"Here's what I eventually realised:
+
+I didn't have an AI problem. I had a PLANNING problem.
+
+The AI wasn't broken. I was asking it to hold 1,000 lines of context in its 
+head. But remember what Session 1 taught you? AI has a limited 'working 
+memory'—the context window.
+
+I'd filled that window to bursting. The AI was literally forgetting what 
+we'd agreed 400 lines ago. And I was surprised when it contradicted itself."
+
+
+THE WHITEBOARD METAPHOR:
+
+"Think of the AI's context window like a whiteboard. Everything you've 
+discussed in a session—your prompts, its responses, the code it's generated—
+gets written on that whiteboard.
+
+But the whiteboard has edges. When it fills up, the oldest stuff gets erased 
+to make room for new stuff. The AI isn't being dumb. It literally cannot see 
+what fell off the whiteboard."
+
+
+================================================================================
+ACT 2: WHAT AI ACTUALLY NEEDS
+================================================================================
+
+13:00–18:00 | THE REVELATION
+--------------------------------------------------------------------------------
+
+ON SCREEN:
+Famous quote appears:
+"Plans are useless, but planning is indispensable."
+— Dwight D. Eisenhower
+
+YOU SAY:
+
+"Eisenhower led the D-Day invasion—the largest amphibious assault in history. 
+And he said this: 'Plans are useless, but planning is indispensable.'
+
+The plan will change. That's fine. But the act of planning forces you to 
+break work into pieces. To decide what matters first. To define what 'done' 
+looks like.
+
+AI loves that. AI is terrible at filling in vagueness."
+
+
+THE MINDSET SHIFT:
+
+"Here's the mindset shift that turned everything around for me:
+
+AI is your developer. You are the architect.
+
+Architects don't lay bricks. They don't wire electricity. They design the 
+structure. They define what each room does. They specify how the pieces 
+connect.
+
+That's you now. You're not writing code—you're writing specifications that 
+AI can execute."
+
+"The hottest new programming language is English."
+                                        — Andrej Karpathy, 2023
+
+
+--------------------------------------------------------------------------------
+18:00–28:00 | THE FRAMEWORK
+--------------------------------------------------------------------------------
+
+THE 5 THINGS AI NEEDS YOU TO PLAN
+[Reveal these one by one as you discuss each. Build anticipation.]
+
+
+1. A CLEAR PROBLEM STATEMENT
+
+"If you start with 'Build me a cool AI tool,' the AI guesses. And it 
+guesses wrong.
+
+But if you start with: 'Customer service spends 3 hours a day answering 
+repeat emails about account balances. Build something that answers those 
+automatically.'
+
+Now the AI understands the job to be done. The constraint. The success 
+condition."
+
+
+2. SMALL PIECES (MODULES)
+
+"Remember the whiteboard? You can't dump 'the whole system' on it.
+
+You plan small pieces: 'Email reader.' 'Topic detector.' 'Response 
+generator.' 'Quality checker.'
+
+Each piece fits on the whiteboard. The AI can handle it brilliantly. 
+Then you connect them."
+
+
+3. INPUTS & OUTPUTS (CONTRACTS)
+
+"Every piece gets a little contract. 'Takes X, produces Y.'
+
+This is how you stop prompts like 'Can you just make it better?' that 
+lead to chaos.
+
+Instead: 'The Topic Detector takes raw email text as input. It outputs 
+one of five categories: Balance Inquiry, Transaction Dispute, Account 
+Access, Card Issues, or Other.'
+
+Clear. Testable. The AI can't misunderstand."
+
+
+4. BUILD ORDER
+
+"What comes first? What depends on what?
+
+Build your safety check BEFORE the fancy features. Learn from my mistake."
+
+
+5. VERIFICATION STEPS
+
+"How will you know it worked? Not 'it looks good' but 'here's the test 
+case that proves it.'"
+
+
+================================================================================
+ACT 2.5: BMAD METHOD — PLANNING IN ACTION
+================================================================================
+
+*** NEW SECTION — 12 MINUTES ***
+*** INCLUDES VIDEO (~5 mins) + DISCUSSION (~7 mins) ***
+
+
+--------------------------------------------------------------------------------
+28:00–30:00 | INTRODUCING BMAD
+--------------------------------------------------------------------------------
+
+ON SCREEN:
+Slide: "From Theory to Reality: Meet Your AI Development Team"
+
+YOU SAY:
+
+"So far, I've given you the theory: plan before you build, break things 
+into modules, define inputs and outputs.
+
+But theory is useless without practice. And I promised you'd see real 
+planning in action.
+
+What if I told you there's a system that takes everything we just discussed—
+the architect mindset, the modular thinking, the clear specifications—and 
+wraps it into a structured workflow with specialised AI agents that guide 
+you through each step?
+
+This is the BMAD Method."
+
+
+ON SCREEN:
+Display: "BMAD = Breakthrough Methodology for Agile AI-Driven Development"
+
+YOU SAY:
+
+"BMAD stands for Breakthrough Methodology for Agile AI-Driven Development. 
+But what it really means is this: instead of talking to one AI that tries 
+to do everything, you work with a team of specialised AI agents—each with 
+a specific role.
+
+Just like a real development team:
+
+• An ANALYST who helps you brainstorm and clarify your idea
+• A PRODUCT MANAGER (PM) who writes the requirements document
+• An ARCHITECT who designs the technical structure
+• A SCRUM MASTER who breaks work into stories
+• A DEVELOPER who writes the code
+
+Remember Session 1 when we talked about AI agents? This is agents in action—
+each one specialised, each one focused."
+
+
+--------------------------------------------------------------------------------
+30:00–35:00 | THE BMAD VIDEO
+--------------------------------------------------------------------------------
+
+ON SCREEN:
+Play pre-recorded video (approximately 5 minutes)
+
+BEFORE VIDEO:
+
+"I've put together a short video that explains how BMAD works—the phases, 
+the agents, and why this approach is so powerful.
+
+Pay attention to the four phases. You'll see our five planning principles 
+embedded throughout."
+
+
+VIDEO CONTENT (What the video covers):
+1. Phase 1 — Analysis: Brainstorming and research (optional but recommended)
+2. Phase 2 — Planning: Creating the PRD (Product Requirements Document)
+3. Phase 3 — Solutioning: Designing architecture and UX
+4. Phase 4 — Implementation: Story-driven development with continuous validation
+
+The video also covers:
+- Scale-adaptive tracks (Quick Flow vs Full BMAD)
+- Agent handoffs
+- How context is preserved between agents through documentation
+
+
+[PLAY VIDEO — 5 MINUTES]
+
+
+--------------------------------------------------------------------------------
+35:00–40:00 | POST-VIDEO DISCUSSION
+--------------------------------------------------------------------------------
+
+AFTER VIDEO:
+
+"Notice something? Every phase produces a document. The Analyst creates a 
+project brief. The PM creates a PRD. The Architect creates technical specs.
+
+Why? Because AI forgets. But documents don't.
+
+When the Developer agent starts coding, it loads those documents as context. 
+It knows exactly what to build because the planning happened first—
+systematically, through specialised agents.
+
+This is the architect mindset operationalised."
+
+
+THE DEMO FLOW (What you saw / will see):
+
+"Let me walk you through what a typical BMAD session looks like:
+
+Step 1: INITIALISE
+Run *workflow-init and tell BMAD what you want to build.
+It recommends a track based on complexity.
+
+Step 2: PM AGENT
+The PM asks you guided questions:
+- What's the input format?
+- What's the output?
+- What edge cases matter?
+- How will we verify success?
+
+These are our five planning principles—but the agent asks the questions.
+
+Step 3: TECH SPEC GENERATED
+In a few minutes of conversation, you get a complete spec:
+- Clear problem statement
+- Defined modules
+- Input/output contracts
+- Build order
+- Acceptance criteria
+
+Step 4: DEVELOPER AGENT
+The Dev agent reads the spec. It doesn't ask what to build—it already knows.
+The spec is the context. The developer follows the plan.
+
+Step 5: SHIP IT
+Working code, built from a clear plan."
+
+
+KEY TAKEAWAYS FROM BMAD:
+
+"Before we move on, let's crystallise why this matters:
+
+• SPECIALISATION BEATS GENERALISM
+  One AI trying to do everything forgets what it agreed. Five specialised 
+  agents, each doing their job, stay focused.
+
+• DOCUMENTS ARE MEMORY
+  AI forgets between sessions. Documents persist. Each phase creates a 
+  document that the next phase reads.
+
+• STRUCTURE ENABLES SPEED
+  It feels slower to plan first. But you saw it—minutes to a complete spec. 
+  Compare that to my 20-hour disaster.
+
+• YOU DON'T NEED TO REMEMBER BEST PRACTICES
+  The agents ask the right questions. You just answer them."
+
+
+"You don't have to use BMAD for the hackathon. But the principles are the 
+same whether you use BMAD, or a one-page template, or just a notepad:
+
+PLAN BEFORE YOU BUILD. BREAK IT INTO PIECES. DEFINE INPUTS AND OUTPUTS.
+
+BMAD just makes that systematic."
+
+
+================================================================================
+ACT 3: YOU BECOMING BUILDERS
+================================================================================
+
+40:00–52:00 | LIVE PLANNING EXERCISE
+--------------------------------------------------------------------------------
+
+ON SCREEN:
+Display the 1-Page AI Project Plan template — blank
+
+YOU SAY:
+
+"You've seen me plan. You've seen BMAD plan. Now it's your turn.
+
+We're going to fill out a one-page plan together—live. Same principles, 
+simpler format.
+
+The problem we'll plan: An AI Email Assistant for customer service."
+
+
+SECTION 1: THE PROBLEM (2 min)
+[Fill in together:]
+
+"What job is this doing? Shout it out."
+
+[Wait for responses. Type:]
+• Help customer service agents respond faster to common email queries
+• Reduce time spent on repetitive responses
+• Maintain quality and personalisation
+
+
+SECTION 2: SUCCESS METRICS (2 min)
+
+"How will we know it worked? Speed? Quality? Fewer escalations?"
+
+[Wait for responses. Type 2-3 into template:]
+• Suggested responses generated in <5 seconds
+• 80%+ of suggestions require minimal editing before sending
+• Reduces average reply time by 50%
+
+
+SECTION 3: THE PIECES (3 min)
+
+"What are the jobs this thing needs to do?
+Shout them out: 'Read email.' 'Understand topic.' 'Write draft.' 
+'Check quality.' 'Hand to human.'"
+
+[Cluster their answers into 4 modules:]
+1. Email Reader: Extracts customer question from raw email
+2. Topic Detector: Categorises into Balance/Dispute/Access/Card/Other
+3. Response Generator: Creates draft reply based on category + templates
+4. Quality Checker: Flags anything that looks wrong before human review
+
+"Notice again: You're doing the planning. AI will do the typing."
+
+
+SECTION 4: INPUTS & OUTPUTS (2 min)
+[Fill a quick table live:]
+
+"This is where 'vibes' become 'engineering.'
+When you tell AI 'this thing takes X and produces Y', its chances of doing 
+something useful skyrocket."
+
+
+SECTION 5: BUILD ORDER (1 min)
+
+"What do we build first?
+
+The Quality Checker comes early—not last. We want safety in place before 
+the fancy stuff. Lesson learned from my disaster."
+
+"You've just done the exact thinking you'll need for your hackathon project. 
+Same template, different problem."
+
+
+--------------------------------------------------------------------------------
+52:00–55:00 | TOOL OPTIONS
+--------------------------------------------------------------------------------
+
+ON SCREEN:
+Display tool comparison table
+
+YOU SAY:
+
+"You've got a plan. Now you need tools. Here's the landscape:
+
+• REPLIT: Zero setup. Code runs in the browser. Perfect if you want to 
+  ship fast without worrying about environments.
+
+• CURSOR: VS Code with AI built in. Great if you already have code you 
+  want to extend.
+
+• CLAUDE CODE: Command-line power. Best for complex projects where you 
+  want full control.
+
+• BMAD METHOD: Works with Claude Code, Cursor, or VS Code. Adds the 
+  structured workflow we just saw."
+
+
+"My recommendation for the hackathon:
+
+• If you want speed and simplicity: Replit
+• If you want structure and guidance: BMAD + Claude Code  
+• If you're extending existing code: Cursor
+
+Session 3 will help you pick based on your specific project."
+
+
+--------------------------------------------------------------------------------
+55:00–60:00 | THE TRANSFORMATION
+--------------------------------------------------------------------------------
+
+CALL TO ACTION: YOU'RE NEXT
+
+ON SCREEN:
+"From 'I Can't' → 'I'm Building'"
+Three bullets beneath:
+• Fill the template before coding
+• Choose tools that fit the plan
+• Bring your plan to Session 3
+
+YOU SAY:
+
+"Let's land this.
+
+The core message of today isn't 'Longy did a cool project' or 'BMAD is 
+impressive.'
+
+It's this: Planning isn't overhead. With AI, planning is the shortcut."
+
+
+"We've covered:
+
+• How my Banking Communication System went sideways when I skipped planning
+• Why AI's context window punishes giant, vague tasks
+• The five things AI needs you to plan: problem, pieces, contracts, build 
+  order, verification
+• How BMAD operationalises these principles with specialised agents
+• How a one-page plan—or a structured system—turns AI from chaos into a 
+  reliable partner
+• And you've practiced that on a real example"
+
+
+THE RETURN TO THE HERO'S JOURNEY:
+
+"At the start, I said I was like you six months ago.
+
+'Not technical enough.' 'I'll let IT handle that.'
+
+The only thing that changed was this: I learned to plan for AI like an 
+architect, not like a desperate person shouting at a magic box.
+
+That is literally the gap between me burning 20 hours... and me using AI 
+to build this entire training program."
+
+
+MICRO-COMMITMENT:
+
+"If you're willing to fill out a one-page template—or try BMAD's workflow-init—
+before you touch code in the hackathon, hit 👍 now."
+
+[Pause. React to the flood of thumbs.]
+
+"Amazing.
+Session 3 is where we pick your real problems and tune these plans. After 
+that: build time."
+
+
+Q&A (3-4 min)
+[Take 2-3 questions. Prepared answers for common ones:]
+
+• "How much planning is enough?"
+  → If you can explain each piece in one sentence, you're ready.
+
+• "What if I don't have a problem yet?"
+  → Session 3 has a problem selection workshop. Come ready to brainstorm.
+
+• "Which tool should I use?"
+  → Session 3 covers this. Short answer: Replit for speed, Claude Code + 
+    BMAD for structure, Cursor for existing code.
+
+• "Do I need to use BMAD?"
+  → No. The one-page template achieves the same goal. BMAD just automates 
+    the discipline.
+
+
+FINAL CLOSE:
+
+"You do not need to become a hardcore developer.
+
+You need to become ruthless about planning clearly.
+
+Let AI be the one typing late into the night. Your job is to tell it what 
+to build and how you'll know it worked.
+
+That's how you go from 'I can't'... to 'I'm building.'
+
+See you in Session 3."
+
+
+================================================================================
+APPENDIX: RESOURCES
+================================================================================
+
+BMAD METHOD RESOURCES
+--------------------------------------------------------------------------------
+• GitHub: https://github.com/bmad-code-org/BMAD-METHOD
+• Installation: npx bmad-method@alpha install
+• Quick Start: Type *workflow-init after installation
+• Discord Community: https://discord.gg/gk8jAdXWmj
+• BMadCode YouTube: https://www.youtube.com/@BMadCode
+
+
+YOUTUBE VIDEOS TO EMBED
+--------------------------------------------------------------------------------
+Choose ONE for the context window section (13-18 min):
+
+• Beginner-friendly (Recommended):
+  "Anthropic's 100K Context Window is Insane!"
+  ~5 minutes, can trim to 2 min.
+
+• Technical deep-dive:
+  Search "Context Window in Large Language Models Explained"
+
+• Andrej Karpathy (star power):
+  "How I Use LLMs" or his YC AI Startup School talk
+
+
+QUOTES USED IN THIS SCRIPT
+--------------------------------------------------------------------------------
+
+"There's a new kind of coding I call 'vibe coding', where you fully give 
+in to the vibes, embrace exponentials, and forget that the code even exists."
+— Andrej Karpathy, February 2025
+  Context: Coined 'vibe coding' in a viral tweet viewed 4.5M+ times.
+
+"The hottest new programming language is English."
+— Andrej Karpathy, January 2023
+  Context: Prophetic statement about LLMs enabling natural language programming.
+
+"Plans are useless, but planning is indispensable."
+— Dwight D. Eisenhower
+  Context: Supreme Commander of Allied Forces in WWII. Led D-Day.
+
+
+KEY STATISTICS TO CITE
+--------------------------------------------------------------------------------
+• Y Combinator Winter 2025: 25% of startups have codebases 95%+ AI-generated
+• Replit: 75% of customers never write a single line of code
+• Karpathy's vibe coding tweet: 4.5M+ views
+
+
+HANDOUT CONTENTS (Post-Session)
+--------------------------------------------------------------------------------
+The digital handout should include:
+• The 1-Page AI Project Plan template (fillable)
+• Quick reference: The 5 Things AI Needs You to Plan
+• Tool comparison matrix (Replit vs Claude Code vs Cursor vs BMAD)
+• Context window cheat sheet (keep modules <300 lines)
+• BMAD Quick Start Guide (installation + first workflow)
+• Links to Session 3 pre-work and resources
+
+
+================================================================================
+TIMING SUMMARY
+================================================================================
+
+Total Session: 60 minutes
+
+0:00–13:00  │ ACT 1: I Was You (disaster story)         │ 13 min
+13:00–28:00 │ ACT 2: What AI Needs (framework)          │ 15 min
+28:00–40:00 │ ACT 2.5: BMAD Method (VIDEO + discussion) │ 12 min
+40:00–60:00 │ ACT 3: You Becoming Builders              │ 20 min
+
+The BMAD section (12 mins) includes:
+• Introduction: 2 min
+• Video: 5 min
+• Post-video discussion & demo recap: 5 min
+
+
+================================================================================
+                              — End of Script —
+        Session 2: The Art of Planning | AI Hackathon Training Program
+================================================================================

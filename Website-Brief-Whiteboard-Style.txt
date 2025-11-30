@@ -1,0 +1,426 @@
+================================================================================
+WEBSITE BRIEF: SESSION 2 PRESENTATION SITE
+"The Art of Planning" — AI Hackathon Training Program
+================================================================================
+
+PROJECT OVERVIEW
+--------------------------------------------------------------------------------
+Create a presentation website styled as an INTERACTIVE WHITEBOARD for Session 2 
+of the AI Hackathon Training Program. 
+
+Duration: 60 minutes (the BMAD video/demo REPLACES some original content, 
+not added on top)
+
+Target: Show to the team as a live presentation companion and standalone resource
+
+
+================================================================================
+DESIGN DIRECTION: WHITEBOARD AESTHETIC
+================================================================================
+
+LOOK AND FEEL
+--------------------------------------------------------------------------------
+The entire site should feel like you're looking at a whiteboard in a meeting 
+room or workshop. Think: collaborative planning session, brainstorming, 
+sketching out ideas together.
+
+Background:
+- Off-white / cream colour (not pure white — too harsh)
+- Subtle texture like whiteboard surface or paper grain
+- Optional: very faint grid lines like graph paper or dotted grid
+
+Typography:
+- Headlines: Hand-drawn / marker style font (e.g., Permanent Marker, Caveat, 
+  Architects Daughter, Patrick Hand, or similar Google Fonts)
+- Body text: Clean but casual (e.g., Nunito, Quicksand, or a neat handwriting font)
+- Annotations: Scribbly, like someone wrote notes in the margin
+
+Colours — WHITEBOARD MARKER PALETTE:
+- Primary: Black marker (#2d2d2d or similar — not pure black)
+- Accent 1: Blue marker (#2563eb or similar dry-erase blue)
+- Accent 2: Red marker (#dc2626 or similar)
+- Accent 3: Green marker (#16a34a or similar)
+- Accent 4: Orange marker (#ea580c) — use for highlighting BMAD/new content
+- Background: Off-white (#f8f6f1 or #fdfbf7)
+
+Visual Elements:
+- Hand-drawn boxes, circles, underlines
+- Arrows connecting ideas (sketchy, not perfect)
+- Sticky notes for key quotes or callouts
+- Doodles and simple icons (stick figures, lightbulbs, checkmarks)
+- "Circled" important words
+- Crossed-out text for "wrong" approaches
+- Stars or asterisks for emphasis
+
+Animations:
+- Text/elements should "draw in" like someone is writing on the board
+- Lines and arrows animate as if being drawn
+- Fade-in with slight hand-wobble effect
+- Scrolling reveals content progressively (like moving along a long whiteboard)
+
+
+================================================================================
+CONTENT SECTIONS (Whiteboard "Zones")
+================================================================================
+
+1. HEADER ZONE — "Today's Session"
+--------------------------------------------------------------------------------
+Style: Like someone wrote the agenda at the top of a whiteboard
+
+Content:
+┌─────────────────────────────────────────────────────────────────┐
+│  SESSION 2: The Art of Planning                                 │
+│  ═══════════════════════════════                                │
+│  "How I Stopped Fighting AI and Started Shipping"               │
+│                                                                 │
+│  📍 60 mins  │  👤 Longy  │  🎯 Planning > Coding               │
+└─────────────────────────────────────────────────────────────────┘
+
+Hand-drawn box around this. Maybe a "TODAY" sticky note in corner.
+
+
+2. THE QUOTE ZONE — Sticky Note Style
+--------------------------------------------------------------------------------
+Style: Yellow sticky note, slightly rotated, with handwritten text
+
+"There's a new kind of coding I call 'vibe coding', where you 
+fully give in to the vibes, embrace exponentials, and forget 
+that the code even exists."
+                                        — Andrej Karpathy, 2025
+
+Second sticky (different colour):
+"The hottest new programming language is English."
+                                        — Karpathy, 2023
+
+
+3. THE AGENDA — "The Journey"
+--------------------------------------------------------------------------------
+Style: Hand-drawn timeline with arrows, like sketched on whiteboard
+
+     [I WAS YOU]  ──→  [WHAT AI NEEDS]  ──→  [BMAD IN ACTION]  ──→  [YOU BUILD]
+        13 min            15 min              12 min (VIDEO)          20 min
+     
+     "The crash"      "The framework"      "Planning IRL"        "Your turn"
+
+Each box is hand-drawn, wobbly edges. Arrows sketched between them.
+Current section could be "circled" or highlighted during presentation.
+
+
+4. THE DISASTER STORY — "My 20-Hour Nightmare"
+--------------------------------------------------------------------------------
+Style: Timeline drawn across the whiteboard with marker
+
+Draw this as a horizontal journey with stick figures or simple icons:
+
+😊 EXCITED     😤 FRUSTRATED     🔥 BUG HELL     💡 BREAKTHROUGH     ✨ CLARITY
+    │                │                │                │                │
+    ▼                ▼                ▼                ▼                ▼
+"Weekend         "1000 lines      "Every fix       "I had a        "Plan 
+ project!"        of spaghetti"    broke 3         PLANNING        first."
+                                   things"          problem"
+
+Hand-drawn arrows between stages. Red marker for "Bug Hell".
+
+Key quote in a speech bubble or circled:
+"I didn't have an AI problem. I had a PLANNING problem."
+                                        ^^^^^^^^^^^^^^^^
+                                        (underlined twice in red)
+
+
+5. THE WHITEBOARD METAPHOR — Visual Diagram
+--------------------------------------------------------------------------------
+Style: Actually draw a whiteboard-within-the-whiteboard!
+
+┌─────────────────────────────────────────┐
+│  AI'S CONTEXT WINDOW                    │
+│  ════════════════════                   │
+│                                         │
+│  ┌─────────────────────────────────┐    │
+│  │ Prompt 1 │ Response │ Prompt 2  │    │  ← "The whiteboard fills up..."
+│  │          │          │ Code...   │    │
+│  │ [ERASED] │          │           │    │  ← "Old stuff falls off!"
+│  └─────────────────────────────────┘    │
+│                                         │
+│  ⚠️ AI forgets what fell off the edge!  │
+└─────────────────────────────────────────┘
+
+
+6. THE MINDSET SHIFT — Big Reveal
+--------------------------------------------------------------------------------
+Style: Written large, like the key takeaway on a whiteboard
+
+Cross out the wrong approach:
+    ̶Y̶o̶u̶ ̶=̶ ̶C̶o̶d̶e̶r̶  ❌
+
+Write the right approach (big, in blue marker):
+    YOU = ARCHITECT  ✓
+    AI = DEVELOPER
+
+Draw a simple diagram:
+    
+    [YOU]  ────→  [BLUEPRINT]  ────→  [AI]  ────→  [CODE]
+     📐            📝                  🤖           💻
+   "Design"     "Specify"          "Execute"     "Ship"
+
+Eisenhower quote on a sticky note:
+"Plans are useless, but planning is indispensable."
+
+
+7. THE FRAMEWORK — "5 Things AI Needs From You"
+--------------------------------------------------------------------------------
+Style: Numbered list with hand-drawn checkboxes, icons, annotations
+
+Draw as a checklist with doodles:
+
+☑️ 1. CLEAR PROBLEM STATEMENT
+      ❌ "Build me a cool AI tool"
+      ✓  "Customer service wastes 3hrs/day on repeat emails"
+      
+☑️ 2. SMALL PIECES (MODULES)
+      [Email Reader] → [Topic Detector] → [Response Gen] → [Quality Check]
+      (draw as connected boxes with arrows)
+      
+☑️ 3. INPUTS & OUTPUTS (CONTRACTS)
+      "Takes X → Produces Y"
+      (draw as simple flowchart)
+      
+☑️ 4. BUILD ORDER
+      ⚠️ Safety checks FIRST, fancy features LATER
+      (maybe a small numbered sequence)
+      
+☑️ 5. VERIFICATION
+      "How do you KNOW it worked?"
+      (draw a checkmark or test tube icon)
+
+
+8. BMAD METHOD SECTION — "Planning in Action" ⭐ HIGHLIGHT THIS
+--------------------------------------------------------------------------------
+Style: New section of whiteboard, maybe with orange marker border to stand out
+       Add a "NEW!" sticky note or star
+
+Header (hand-drawn, big):
+╔═══════════════════════════════════════════════════════════════════╗
+║  BMAD METHOD                                                      ║
+║  Breakthrough Methodology for Agile AI-Driven Development         ║
+╚═══════════════════════════════════════════════════════════════════╝
+
+The Team (draw as stick figures with labels):
+
+    🧑‍💼          👩‍💼          🏗️          📋          👨‍💻
+   ANALYST       PM        ARCHITECT    SCRUM       DEVELOPER
+                                       MASTER
+   "What do    "What       "How does   "What's    "Let's
+    we want?"   exactly?"   it work?"   first?"    build it!"
+
+The Flow (draw as connected boxes):
+
+    ┌──────────┐    ┌──────────┐    ┌──────────┐    ┌──────────┐
+    │ ANALYSIS │ →  │ PLANNING │ →  │SOLUTIONING│ →  │  BUILD   │
+    │(optional)│    │  (PRD)   │    │  (Arch)  │    │ (Code!)  │
+    └──────────┘    └──────────┘    └──────────┘    └──────────┘
+
+Key insight (circle this or put in a cloud bubble):
+    "Each phase creates a DOCUMENT"
+    "Documents = Memory for AI"
+    "AI forgets. Docs don't."
+
+
+*** VIDEO EMBED HERE ***
+--------------------------------------------------------------------------------
+Style: Draw a "screen" or "TV" shape on the whiteboard
+
+    ┌─────────────────────────────────────────┐
+    │  ▶  BMAD METHOD VIDEO                   │
+    │     ═══════════════════                 │
+    │                                         │
+    │         [ PLAY VIDEO ]                  │
+    │                                         │
+    │     "Agents, Planning & Workflows"      │
+    │              ~ 5 mins ~                 │
+    └─────────────────────────────────────────┘
+
+Actual video player embedded here. Style the player controls to look 
+hand-drawn if possible, or keep minimal.
+
+Video URL: [TO BE PROVIDED]
+Fallback: YouTube embed or MP4 file
+
+
+9. LIVE DEMO RECAP — "What You Just Saw"
+--------------------------------------------------------------------------------
+Style: Quick numbered steps, like notes from watching the demo
+
+Demo Steps (draw as a quick flow):
+
+    1️⃣ *workflow-init     "Tell BMAD what you want"
+           ↓
+    2️⃣ PM asks questions   "Guided planning conversation"
+           ↓
+    3️⃣ Tech Spec created   "Complete spec in 3 mins!"
+           ↓
+    4️⃣ Dev agent builds    "It reads the spec, knows what to do"
+           ↓
+    5️⃣ SHIP IT! 🚀
+
+Scribbled note in margin:
+    "10 mins from idea → spec → code starting"
+    "vs my 20hr disaster 😅"
+
+
+10. YOUR TURN — "The Exercise"
+--------------------------------------------------------------------------------
+Style: Template drawn on whiteboard for audience to mentally fill in
+
+    ┌─────────────────────────────────────────────────────────────┐
+    │  YOUR 1-PAGE PLAN                                           │
+    │  ════════════════                                           │
+    │                                                             │
+    │  PROBLEM: _________________________________________         │
+    │                                                             │
+    │  SUCCESS = _________________________________________        │
+    │                                                             │
+    │  PIECES:  [____] → [____] → [____] → [____]                │
+    │                                                             │
+    │  BUILD ORDER:  1. ______  2. ______  3. ______             │
+    │                                                             │
+    │  TEST: _________________________________________            │
+    └─────────────────────────────────────────────────────────────┘
+
+
+11. TOOL OPTIONS — Quick Comparison
+--------------------------------------------------------------------------------
+Style: Simple comparison table drawn on whiteboard
+
+    TOOL          │  BEST FOR           │  VIBE
+    ══════════════│═════════════════════│══════════════
+    Replit        │  Speed, no setup    │  "Just ship it"
+    Cursor        │  Existing code      │  "Extend what I have"  
+    Claude Code   │  Full control       │  "Power user"
+    + BMAD        │  Structured process │  "Guide me"
+
+Circle or star the recommendation based on audience.
+
+
+12. THE CLOSE — "From I Can't → I'm Building"
+--------------------------------------------------------------------------------
+Style: Big finale message, like end of a workshop whiteboard
+
+Draw transformation:
+
+    ̶"̶I̶'̶m̶ ̶n̶o̶t̶ ̶t̶e̶c̶h̶n̶i̶c̶a̶l̶ ̶e̶n̶o̶u̶g̶h̶"̶     →     "I'M AN ARCHITECT"
+    
+    ̶"̶I̶'̶l̶l̶ ̶w̶a̶i̶t̶ ̶f̶o̶r̶ ̶I̶T̶"̶            →     "I'M BUILDING"
+
+Final sticky note:
+    ╔════════════════════════════════════════╗
+    ║  PLANNING ISN'T OVERHEAD.              ║
+    ║  WITH AI, PLANNING IS THE SHORTCUT.    ║
+    ╚════════════════════════════════════════╝
+
+
+13. RESOURCES — Corner of the Whiteboard
+--------------------------------------------------------------------------------
+Style: Scribbled links like someone wrote them quickly
+
+    📎 BMAD: github.com/bmad-code-org/BMAD-METHOD
+    💻 Install: npx bmad-method@alpha install  
+    💬 Discord: discord.gg/gk8jAdXWmj
+    📺 YouTube: youtube.com/@BMadCode
+
+
+================================================================================
+TECHNICAL REQUIREMENTS
+================================================================================
+
+MUST HAVES
+--------------------------------------------------------------------------------
+□ Responsive (works on projector/large screen AND laptops)
+□ Smooth scrolling between sections
+□ Video embed that works reliably (YouTube or self-hosted)
+□ Fast loading (optimise images/animations)
+□ Works offline once loaded (for demo reliability)
+
+ANIMATIONS
+--------------------------------------------------------------------------------
+□ "Draw-in" effect for text and lines (like being written)
+□ Elements appear as you scroll (progressive reveal)
+□ Subtle wobble/hand-drawn feel on hover
+□ Smooth transitions between sections
+□ Video plays inline (no popup)
+
+INTERACTIONS
+--------------------------------------------------------------------------------
+□ Click/tap to advance through sections (presentation mode)
+□ Keyboard navigation (arrow keys, spacebar)
+□ Section markers/navigation dots on side
+□ "Current section" indicator
+
+FONTS (Google Fonts suggestions)
+--------------------------------------------------------------------------------
+- Headlines: Permanent Marker, Caveat, Patrick Hand, Architects Daughter
+- Body: Nunito, Quicksand, Gaegu, Coming Soon
+- Monospace/code: Fira Code, Source Code Pro
+
+NICE TO HAVES
+--------------------------------------------------------------------------------
+□ Presenter mode (shows notes, next section preview)
+□ Timer display for pacing
+□ Audience can follow along on their devices
+□ Export/print as PDF handout
+□ Dark mode toggle (inverted whiteboard = chalkboard style?)
+
+
+================================================================================
+FILE DELIVERABLES
+================================================================================
+
+1. index.html — Main presentation site
+2. styles.css — All styling (or embedded)
+3. script.js — Animations and interactions
+4. assets/ — Any images, icons, fonts
+5. video/ — Embedded video file OR YouTube link
+
+Hosting: Should work as static files (GitHub Pages, Netlify, etc.)
+
+
+================================================================================
+INSPIRATION / REFERENCES
+================================================================================
+
+Look at:
+- Excalidraw (excalidraw.com) — hand-drawn diagram style
+- Miro/FigJam boards — collaborative whiteboard feel
+- Notion-style pages with sketch illustrations
+- Apple keynote "marker" animations
+- Prezi with hand-drawn theme
+
+
+================================================================================
+TIMELINE NOTES
+================================================================================
+
+Revised timing for 60-minute session:
+
+0:00–13:00  │ ACT 1: I Was You (disaster story)
+13:00–28:00 │ ACT 2: What AI Needs (framework)
+28:00–40:00 │ ACT 2.5: BMAD Method (VIDEO + demo recap) — 12 mins
+40:00–60:00 │ ACT 3: You Becoming Builders (exercise + close)
+
+The BMAD section (12 mins) replaces some of the original Act 3 content.
+Video is approximately 5 minutes.
+Demo discussion/recap is approximately 7 minutes.
+
+
+================================================================================
+QUESTIONS FOR CLIENT (Longy)
+================================================================================
+
+1. Video file — Do you have the final video file or YouTube link?
+2. Branding — Any specific colours/logo to incorporate?
+3. Navigation — Prefer scrolling OR click-to-advance slides?
+4. Offline — Need it to work without internet?
+5. Handout — Want a printable PDF version generated?
+
+================================================================================
+END OF BRIEF
+================================================================================

@@ -1,0 +1,996 @@
+/* ============================================
+   WHITEBOARD AESTHETIC - Session 2 Presentation
+   ============================================ */
+
+/* Import Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Architects+Daughter&family=Caveat:wght@400;700&family=Nunito:wght@400;600;700&family=Permanent+Marker&family=Patrick+Hand&display=swap');
+
+/* ============================================
+   CSS VARIABLES - Whiteboard Marker Palette
+   ============================================ */
+:root {
+  /* Background */
+  --bg-cream: #f8f6f1;
+  --bg-paper: #fdfbf7;
+
+  /* Marker Colors */
+  --marker-black: #2d2d2d;
+  --marker-blue: #2563eb;
+  --marker-red: #dc2626;
+  --marker-green: #16a34a;
+  --marker-orange: #ea580c;
+
+  /* Sticky Note Colors */
+  --sticky-yellow: #fef08a;
+  --sticky-pink: #fda4af;
+  --sticky-blue: #93c5fd;
+  --sticky-green: #86efac;
+
+  /* Fonts */
+  --font-headline: 'Permanent Marker', cursive;
+  --font-handwriting: 'Caveat', cursive;
+  --font-body: 'Nunito', sans-serif;
+  --font-sketch: 'Patrick Hand', cursive;
+  --font-architect: 'Architects Daughter', cursive;
+
+  /* Spacing */
+  --section-padding: 4rem 2rem;
+  --container-max: 1200px;
+}
+
+/* ============================================
+   RESET & BASE
+   ============================================ */
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: var(--font-body);
+  background-color: var(--bg-cream);
+  color: var(--marker-black);
+  line-height: 1.6;
+  min-height: 100vh;
+  background-image:
+    linear-gradient(rgba(0,0,0,0.02) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(0,0,0,0.02) 1px, transparent 1px);
+  background-size: 20px 20px;
+}
+
+/* ============================================
+   TYPOGRAPHY
+   ============================================ */
+h1, h2, h3 {
+  font-family: var(--font-headline);
+  line-height: 1.2;
+}
+
+h1 { font-size: clamp(2.5rem, 6vw, 4rem); }
+h2 { font-size: clamp(1.8rem, 4vw, 2.5rem); }
+h3 { font-size: clamp(1.4rem, 3vw, 1.8rem); }
+
+.handwriting {
+  font-family: var(--font-handwriting);
+  font-size: 1.5rem;
+}
+
+.sketch-text {
+  font-family: var(--font-sketch);
+}
+
+.architect-text {
+  font-family: var(--font-architect);
+}
+
+/* ============================================
+   LAYOUT
+   ============================================ */
+.container {
+  max-width: var(--container-max);
+  margin: 0 auto;
+  padding: 0 1.5rem;
+}
+
+section {
+  padding: var(--section-padding);
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+/* ============================================
+   NAVIGATION
+   ============================================ */
+.nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  background: var(--bg-cream);
+  border-bottom: 3px solid var(--marker-black);
+  padding: 1rem 2rem;
+  z-index: 1000;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.nav-logo {
+  font-family: var(--font-headline);
+  font-size: 1.5rem;
+  color: var(--marker-blue);
+  text-decoration: none;
+}
+
+.nav-links {
+  display: flex;
+  gap: 1.5rem;
+  list-style: none;
+}
+
+.nav-links a {
+  font-family: var(--font-sketch);
+  font-size: 1.1rem;
+  color: var(--marker-black);
+  text-decoration: none;
+  padding: 0.5rem 1rem;
+  border-radius: 4px;
+  transition: all 0.3s ease;
+  position: relative;
+}
+
+.nav-links a:hover {
+  color: var(--marker-blue);
+}
+
+.nav-links a::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  width: 0;
+  height: 2px;
+  background: var(--marker-blue);
+  transition: all 0.3s ease;
+  transform: translateX(-50%);
+}
+
+.nav-links a:hover::after,
+.nav-links a.active::after {
+  width: 80%;
+}
+
+.nav-toggle {
+  display: none;
+  background: none;
+  border: none;
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+
+/* ============================================
+   HAND-DRAWN ELEMENTS
+   ============================================ */
+.hand-drawn-box {
+  border: 3px solid var(--marker-black);
+  border-radius: 8px 4px 12px 4px;
+  padding: 2rem;
+  position: relative;
+  background: var(--bg-paper);
+  transform: rotate(-0.5deg);
+}
+
+.hand-drawn-box::before {
+  content: '';
+  position: absolute;
+  top: -2px;
+  left: -2px;
+  right: -2px;
+  bottom: -2px;
+  border: 2px solid var(--marker-black);
+  border-radius: 12px 8px 4px 8px;
+  opacity: 0.3;
+}
+
+.sticky-note {
+  background: var(--sticky-yellow);
+  padding: 1.5rem;
+  transform: rotate(-2deg);
+  box-shadow: 4px 4px 8px rgba(0,0,0,0.15);
+  font-family: var(--font-handwriting);
+  font-size: 1.3rem;
+  max-width: 400px;
+  position: relative;
+}
+
+.sticky-note.pink { background: var(--sticky-pink); }
+.sticky-note.blue { background: var(--sticky-blue); transform: rotate(1deg); }
+.sticky-note.green { background: var(--sticky-green); transform: rotate(-1deg); }
+
+.sticky-note::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 50%;
+  width: 60px;
+  height: 20px;
+  background: rgba(255,255,255,0.5);
+  transform: translateX(-50%) translateY(-50%);
+}
+
+/* Underline effect */
+.underline-marker {
+  position: relative;
+  display: inline;
+}
+
+.underline-marker::after {
+  content: '';
+  position: absolute;
+  bottom: -4px;
+  left: 0;
+  right: 0;
+  height: 8px;
+  background: var(--marker-blue);
+  opacity: 0.3;
+  transform: skew(-5deg);
+}
+
+.underline-marker.red::after { background: var(--marker-red); }
+.underline-marker.green::after { background: var(--marker-green); }
+.underline-marker.orange::after { background: var(--marker-orange); }
+
+/* Circle highlight */
+.circled {
+  position: relative;
+  display: inline-block;
+}
+
+.circled::before {
+  content: '';
+  position: absolute;
+  top: -10px;
+  left: -15px;
+  right: -15px;
+  bottom: -10px;
+  border: 3px solid var(--marker-red);
+  border-radius: 50% 45% 50% 45%;
+  transform: rotate(-2deg);
+}
+
+/* Crossed out text */
+.crossed-out {
+  text-decoration: line-through;
+  text-decoration-color: var(--marker-red);
+  text-decoration-thickness: 3px;
+  opacity: 0.6;
+}
+
+/* ============================================
+   ARROWS & CONNECTORS
+   ============================================ */
+.arrow-right {
+  display: inline-block;
+  font-family: var(--font-handwriting);
+  font-size: 2rem;
+  color: var(--marker-blue);
+  margin: 0 1rem;
+}
+
+.arrow-down {
+  display: block;
+  text-align: center;
+  font-family: var(--font-handwriting);
+  font-size: 2rem;
+  color: var(--marker-blue);
+  margin: 1rem 0;
+}
+
+/* ============================================
+   FLOW DIAGRAMS
+   ============================================ */
+.flow-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 1rem;
+  padding: 2rem 0;
+}
+
+.flow-box {
+  background: var(--bg-paper);
+  border: 2px solid var(--marker-black);
+  border-radius: 8px;
+  padding: 1rem 1.5rem;
+  font-family: var(--font-sketch);
+  font-size: 1.1rem;
+  text-align: center;
+  min-width: 120px;
+  transform: rotate(-1deg);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.flow-box:nth-child(even) {
+  transform: rotate(1deg);
+}
+
+.flow-box:hover {
+  transform: rotate(0deg) scale(1.05);
+  box-shadow: 4px 4px 0 var(--marker-blue);
+}
+
+.flow-box.highlight {
+  border-color: var(--marker-orange);
+  border-width: 3px;
+}
+
+.flow-arrow {
+  font-size: 2rem;
+  color: var(--marker-blue);
+}
+
+/* ============================================
+   TIMELINE
+   ============================================ */
+.timeline {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  padding: 2rem 0;
+  position: relative;
+  flex-wrap: wrap;
+}
+
+.timeline::before {
+  content: '';
+  position: absolute;
+  top: 40px;
+  left: 5%;
+  right: 5%;
+  height: 4px;
+  background: var(--marker-black);
+  z-index: 0;
+}
+
+.timeline-item {
+  flex: 1;
+  min-width: 150px;
+  text-align: center;
+  position: relative;
+  z-index: 1;
+  padding: 0 0.5rem;
+}
+
+.timeline-emoji {
+  font-size: 2.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.timeline-dot {
+  width: 20px;
+  height: 20px;
+  background: var(--marker-blue);
+  border: 3px solid var(--marker-black);
+  border-radius: 50%;
+  margin: 0 auto 1rem;
+}
+
+.timeline-item.danger .timeline-dot {
+  background: var(--marker-red);
+}
+
+.timeline-item.success .timeline-dot {
+  background: var(--marker-green);
+}
+
+.timeline-label {
+  font-family: var(--font-handwriting);
+  font-size: 1.2rem;
+  color: var(--marker-black);
+}
+
+/* ============================================
+   CHECKLIST
+   ============================================ */
+.checklist {
+  list-style: none;
+  padding: 0;
+}
+
+.checklist-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 1rem;
+  padding: 1.5rem;
+  margin-bottom: 1rem;
+  background: var(--bg-paper);
+  border-left: 4px solid var(--marker-blue);
+  border-radius: 0 8px 8px 0;
+  transition: transform 0.3s ease;
+}
+
+.checklist-item:hover {
+  transform: translateX(10px);
+}
+
+.checklist-icon {
+  font-size: 1.5rem;
+  flex-shrink: 0;
+}
+
+.checklist-content h4 {
+  font-family: var(--font-headline);
+  font-size: 1.2rem;
+  margin-bottom: 0.5rem;
+  color: var(--marker-blue);
+}
+
+.checklist-content p {
+  font-family: var(--font-sketch);
+  font-size: 1.1rem;
+}
+
+.example-bad {
+  color: var(--marker-red);
+  font-family: var(--font-handwriting);
+}
+
+.example-good {
+  color: var(--marker-green);
+  font-family: var(--font-handwriting);
+}
+
+/* ============================================
+   VIDEO PLAYER
+   ============================================ */
+.video-container {
+  position: relative;
+  background: var(--marker-black);
+  border: 4px solid var(--marker-black);
+  border-radius: 12px;
+  overflow: hidden;
+  max-width: 900px;
+  margin: 2rem auto;
+  box-shadow: 8px 8px 0 var(--marker-blue);
+}
+
+.video-container::before {
+  content: '';
+  position: absolute;
+  top: -8px;
+  left: 20px;
+  right: 20px;
+  height: 8px;
+  background: var(--marker-black);
+  border-radius: 4px 4px 0 0;
+}
+
+.video-container video {
+  width: 100%;
+  display: block;
+}
+
+.video-label {
+  position: absolute;
+  top: -35px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: var(--sticky-yellow);
+  padding: 0.5rem 1.5rem;
+  font-family: var(--font-handwriting);
+  font-size: 1.2rem;
+  border-radius: 4px;
+  box-shadow: 2px 2px 4px rgba(0,0,0,0.2);
+}
+
+/* ============================================
+   TEMPLATE BOX
+   ============================================ */
+.template-box {
+  background: var(--bg-paper);
+  border: 3px dashed var(--marker-black);
+  border-radius: 12px;
+  padding: 2rem;
+  max-width: 700px;
+  margin: 2rem auto;
+}
+
+.template-box h3 {
+  text-align: center;
+  margin-bottom: 1.5rem;
+  font-family: var(--font-headline);
+}
+
+.template-field {
+  margin-bottom: 1.5rem;
+}
+
+.template-field label {
+  font-family: var(--font-sketch);
+  font-size: 1.2rem;
+  color: var(--marker-blue);
+  display: block;
+  margin-bottom: 0.5rem;
+}
+
+.template-field .line {
+  border-bottom: 2px dashed var(--marker-black);
+  height: 2rem;
+}
+
+.template-flow {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+  margin: 1rem 0;
+}
+
+.template-flow .box {
+  width: 80px;
+  height: 50px;
+  border: 2px dashed var(--marker-black);
+  border-radius: 4px;
+}
+
+/* ============================================
+   COMPARISON TABLE
+   ============================================ */
+.comparison-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-family: var(--font-sketch);
+  margin: 2rem 0;
+}
+
+.comparison-table th,
+.comparison-table td {
+  padding: 1rem;
+  text-align: left;
+  border-bottom: 2px solid var(--marker-black);
+}
+
+.comparison-table th {
+  font-family: var(--font-headline);
+  background: var(--bg-paper);
+  font-size: 1.1rem;
+}
+
+.comparison-table tr:hover td {
+  background: rgba(37, 99, 235, 0.1);
+}
+
+.comparison-table .recommended {
+  background: rgba(22, 163, 74, 0.1);
+  border-left: 4px solid var(--marker-green);
+}
+
+/* ============================================
+   BUTTONS & LINKS
+   ============================================ */
+.btn {
+  display: inline-block;
+  font-family: var(--font-sketch);
+  font-size: 1.2rem;
+  padding: 1rem 2rem;
+  border: 3px solid var(--marker-black);
+  border-radius: 8px;
+  background: var(--bg-paper);
+  color: var(--marker-black);
+  text-decoration: none;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  transform: rotate(-1deg);
+}
+
+.btn:hover {
+  transform: rotate(0deg) scale(1.05);
+  box-shadow: 4px 4px 0 var(--marker-blue);
+}
+
+.btn-primary {
+  background: var(--marker-blue);
+  color: white;
+  border-color: var(--marker-blue);
+}
+
+.btn-primary:hover {
+  box-shadow: 4px 4px 0 var(--marker-black);
+}
+
+/* ============================================
+   ROLE CARDS (BMAD)
+   ============================================ */
+.role-cards {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+  justify-content: center;
+  padding: 2rem 0;
+}
+
+.role-card {
+  background: var(--bg-paper);
+  border: 2px solid var(--marker-black);
+  border-radius: 12px;
+  padding: 1.5rem;
+  text-align: center;
+  min-width: 140px;
+  max-width: 180px;
+  transform: rotate(-2deg);
+  transition: all 0.3s ease;
+}
+
+.role-card:nth-child(even) {
+  transform: rotate(2deg);
+}
+
+.role-card:hover {
+  transform: rotate(0deg) translateY(-5px);
+  box-shadow: 4px 4px 0 var(--marker-orange);
+}
+
+.role-emoji {
+  font-size: 3rem;
+  margin-bottom: 0.5rem;
+}
+
+.role-title {
+  font-family: var(--font-headline);
+  font-size: 0.9rem;
+  color: var(--marker-blue);
+  margin-bottom: 0.5rem;
+}
+
+.role-desc {
+  font-family: var(--font-handwriting);
+  font-size: 1.1rem;
+  color: var(--marker-black);
+}
+
+/* ============================================
+   QUOTE BLOCK
+   ============================================ */
+.quote-block {
+  font-family: var(--font-handwriting);
+  font-size: 1.8rem;
+  text-align: center;
+  padding: 2rem;
+  margin: 2rem 0;
+  position: relative;
+}
+
+.quote-block::before,
+.quote-block::after {
+  font-size: 4rem;
+  color: var(--marker-blue);
+  opacity: 0.3;
+  position: absolute;
+}
+
+.quote-block::before {
+  content: '"';
+  top: 0;
+  left: 1rem;
+}
+
+.quote-block::after {
+  content: '"';
+  bottom: -1rem;
+  right: 1rem;
+}
+
+.quote-author {
+  font-family: var(--font-sketch);
+  font-size: 1.1rem;
+  color: var(--marker-blue);
+  margin-top: 1rem;
+  display: block;
+}
+
+/* ============================================
+   TRANSFORMATION SECTION
+   ============================================ */
+.transformation {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
+  flex-wrap: wrap;
+  padding: 2rem 0;
+}
+
+.before-after {
+  text-align: center;
+}
+
+.before-after .before {
+  font-family: var(--font-handwriting);
+  font-size: 1.5rem;
+  text-decoration: line-through;
+  text-decoration-color: var(--marker-red);
+  text-decoration-thickness: 3px;
+  opacity: 0.6;
+  margin-bottom: 0.5rem;
+}
+
+.before-after .after {
+  font-family: var(--font-headline);
+  font-size: 2rem;
+  color: var(--marker-blue);
+}
+
+.transform-arrow {
+  font-size: 3rem;
+  color: var(--marker-green);
+}
+
+/* ============================================
+   RESOURCES LIST
+   ============================================ */
+.resources-list {
+  list-style: none;
+  padding: 0;
+}
+
+.resources-list li {
+  font-family: var(--font-sketch);
+  font-size: 1.3rem;
+  padding: 1rem 0;
+  border-bottom: 2px dashed rgba(0,0,0,0.2);
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.resources-list a {
+  color: var(--marker-blue);
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.resources-list a:hover {
+  color: var(--marker-orange);
+  text-decoration: underline;
+}
+
+/* ============================================
+   PAGE INDICATOR / NAV DOTS
+   ============================================ */
+.page-nav {
+  position: fixed;
+  right: 2rem;
+  top: 50%;
+  transform: translateY(-50%);
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  z-index: 100;
+}
+
+.page-dot {
+  width: 12px;
+  height: 12px;
+  border: 2px solid var(--marker-black);
+  border-radius: 50%;
+  background: transparent;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.page-dot:hover,
+.page-dot.active {
+  background: var(--marker-blue);
+  transform: scale(1.3);
+}
+
+/* ============================================
+   KEYBOARD HINT
+   ============================================ */
+.keyboard-hint {
+  position: fixed;
+  bottom: 2rem;
+  right: 2rem;
+  background: var(--bg-paper);
+  border: 2px solid var(--marker-black);
+  padding: 0.5rem 1rem;
+  border-radius: 8px;
+  font-family: var(--font-sketch);
+  font-size: 0.9rem;
+  opacity: 0.7;
+  z-index: 100;
+}
+
+.keyboard-hint kbd {
+  background: var(--marker-black);
+  color: white;
+  padding: 0.2rem 0.5rem;
+  border-radius: 4px;
+  margin: 0 0.2rem;
+}
+
+/* ============================================
+   ANIMATIONS
+   ============================================ */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes drawIn {
+  from {
+    opacity: 0;
+    transform: scale(0.8) rotate(-5deg);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1) rotate(0deg);
+  }
+}
+
+@keyframes wobble {
+  0%, 100% { transform: rotate(-1deg); }
+  50% { transform: rotate(1deg); }
+}
+
+.animate-in {
+  animation: fadeInUp 0.6s ease forwards;
+}
+
+.draw-in {
+  animation: drawIn 0.5s ease forwards;
+}
+
+/* Scroll-triggered animations */
+.reveal {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: all 0.6s ease;
+}
+
+.reveal.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* ============================================
+   HERO SECTION
+   ============================================ */
+.hero {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding-top: 80px;
+}
+
+.hero h1 {
+  margin-bottom: 1rem;
+}
+
+.hero .subtitle {
+  font-family: var(--font-handwriting);
+  font-size: clamp(1.5rem, 3vw, 2rem);
+  color: var(--marker-blue);
+  margin-bottom: 2rem;
+}
+
+.hero .meta {
+  display: flex;
+  gap: 2rem;
+  flex-wrap: wrap;
+  justify-content: center;
+  font-family: var(--font-sketch);
+  font-size: 1.2rem;
+  margin-bottom: 2rem;
+}
+
+.hero .meta span {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+/* ============================================
+   FOOTER
+   ============================================ */
+.footer {
+  background: var(--marker-black);
+  color: var(--bg-cream);
+  padding: 2rem;
+  text-align: center;
+  font-family: var(--font-sketch);
+}
+
+.footer a {
+  color: var(--marker-blue);
+}
+
+/* ============================================
+   RESPONSIVE
+   ============================================ */
+@media (max-width: 768px) {
+  .nav-links {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    background: var(--bg-cream);
+    flex-direction: column;
+    padding: 1rem;
+    border-bottom: 3px solid var(--marker-black);
+  }
+
+  .nav-links.open {
+    display: flex;
+  }
+
+  .nav-toggle {
+    display: block;
+  }
+
+  .timeline {
+    flex-direction: column;
+    gap: 2rem;
+  }
+
+  .timeline::before {
+    display: none;
+  }
+
+  .flow-container {
+    flex-direction: column;
+  }
+
+  .transformation {
+    flex-direction: column;
+  }
+
+  .page-nav {
+    display: none;
+  }
+
+  .keyboard-hint {
+    display: none;
+  }
+
+  section {
+    padding: 3rem 1rem;
+  }
+}
+
+/* ============================================
+   PRINT STYLES
+   ============================================ */
+@media print {
+  .nav, .page-nav, .keyboard-hint {
+    display: none;
+  }
+
+  section {
+    page-break-inside: avoid;
+    min-height: auto;
+  }
+
+  .video-container {
+    display: none;
+  }
+}

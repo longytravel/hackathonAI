@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>The Framework | Session 2: The Art of Planning</title>
+  <link rel="stylesheet" href="../css/styles.css">
+</head>
+<body>
+  <!-- Navigation -->
+  <nav class="nav">
+    <a href="../index.html" class="nav-logo">Session 2</a>
+    <button class="nav-toggle" aria-label="Toggle menu">☰</button>
+    <ul class="nav-links">
+      <li><a href="../index.html">Home</a></li>
+      <li><a href="journey.html">The Journey</a></li>
+      <li><a href="framework.html" class="active">Framework</a></li>
+      <li><a href="bmad.html">BMAD Method</a></li>
+      <li><a href="exercise.html">Your Turn</a></li>
+      <li><a href="resources.html">Resources</a></li>
+    </ul>
+  </nav>
+
+  <div class="page-nav"></div>
+
+  <div class="keyboard-hint">
+    <kbd>←</kbd> <kbd>→</kbd> Navigate
+  </div>
+
+  <!-- The Mindset Shift -->
+  <section id="mindset">
+    <div class="container" style="text-align: center;">
+      <h1 class="reveal">What AI Actually Needs</h1>
+      <p class="subtitle reveal" style="font-family: var(--font-handwriting); font-size: 1.8rem; color: var(--marker-blue);">
+        The revelation, the framework, the mindset shift
+      </p>
+
+      <!-- The Big Reveal -->
+      <div style="margin: 4rem 0;">
+        <div class="reveal" style="margin-bottom: 2rem;">
+          <p class="handwriting" style="font-size: 2rem;">
+            <span class="crossed-out">You = Coder</span> ❌
+          </p>
+        </div>
+
+        <div class="reveal" style="animation-delay: 0.3s;">
+          <p style="font-family: var(--font-headline); font-size: 3rem; color: var(--marker-blue);">
+            YOU = ARCHITECT ✓
+          </p>
+          <p style="font-family: var(--font-headline); font-size: 2rem; color: var(--marker-black); margin-top: 0.5rem;">
+            AI = DEVELOPER
+          </p>
+        </div>
+      </div>
+
+      <!-- The Flow -->
+      <div class="flow-container reveal" style="margin: 3rem 0;">
+        <div class="flow-box">
+          <div style="font-size: 2rem;">📐</div>
+          <strong>YOU</strong>
+          <div class="handwriting">"Design"</div>
+        </div>
+        <span class="flow-arrow">→</span>
+        <div class="flow-box">
+          <div style="font-size: 2rem;">📝</div>
+          <strong>BLUEPRINT</strong>
+          <div class="handwriting">"Specify"</div>
+        </div>
+        <span class="flow-arrow">→</span>
+        <div class="flow-box">
+          <div style="font-size: 2rem;">🤖</div>
+          <strong>AI</strong>
+          <div class="handwriting">"Execute"</div>
+        </div>
+        <span class="flow-arrow">→</span>
+        <div class="flow-box">
+          <div style="font-size: 2rem;">💻</div>
+          <strong>CODE</strong>
+          <div class="handwriting">"Ship"</div>
+        </div>
+      </div>
+
+      <div class="sticky-note green reveal" style="margin: 2rem auto; max-width: 500px;">
+        <p>"Plans are useless, but planning is indispensable."</p>
+        <span class="quote-author">— Dwight D. Eisenhower</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- The 5 Things -->
+  <section id="five-things">
+    <div class="container">
+      <h2 class="reveal" style="text-align: center; margin-bottom: 3rem;">
+        5 Things AI Needs From You
+      </h2>
+      <p class="handwriting reveal" style="text-align: center; font-size: 1.4rem; margin-bottom: 2rem; color: var(--marker-blue);">
+        (None of them are code!)
+      </p>
+
+      <ul class="checklist">
+        <!-- 1. Clear Problem Statement -->
+        <li class="checklist-item reveal">
+          <span class="checklist-icon">☑️</span>
+          <div class="checklist-content">
+            <h4>1. CLEAR PROBLEM STATEMENT</h4>
+            <p class="example-bad">❌ "Build me a cool AI tool"</p>
+            <p class="example-good">✓ "Customer service wastes 3hrs/day on repeat emails. I want to auto-draft responses."</p>
+          </div>
+        </li>
+
+        <!-- 2. Small Pieces -->
+        <li class="checklist-item reveal">
+          <span class="checklist-icon">☑️</span>
+          <div class="checklist-content">
+            <h4>2. SMALL PIECES (MODULES)</h4>
+            <p class="handwriting" style="font-size: 1.2rem;">Break it down into bite-sized chunks:</p>
+            <div class="flow-container" style="justify-content: flex-start; padding: 1rem 0;">
+              <div class="flow-box" style="min-width: 100px; font-size: 0.9rem;">Email Reader</div>
+              <span class="flow-arrow">→</span>
+              <div class="flow-box" style="min-width: 100px; font-size: 0.9rem;">Topic Detector</div>
+              <span class="flow-arrow">→</span>
+              <div class="flow-box" style="min-width: 100px; font-size: 0.9rem;">Response Gen</div>
+              <span class="flow-arrow">→</span>
+              <div class="flow-box" style="min-width: 100px; font-size: 0.9rem;">Quality Check</div>
+            </div>
+          </div>
+        </li>
+
+        <!-- 3. Inputs & Outputs -->
+        <li class="checklist-item reveal">
+          <span class="checklist-icon">☑️</span>
+          <div class="checklist-content">
+            <h4>3. INPUTS & OUTPUTS (CONTRACTS)</h4>
+            <p class="handwriting" style="font-size: 1.2rem;">What goes in? What comes out?</p>
+            <div class="hand-drawn-box" style="margin-top: 1rem; padding: 1rem;">
+              <p style="font-family: var(--font-sketch);">
+                <strong>Takes:</strong> Raw email text (string)<br>
+                <strong>Produces:</strong> Drafted response + confidence score (0-100)
+              </p>
+            </div>
+          </div>
+        </li>
+
+        <!-- 4. Build Order -->
+        <li class="checklist-item reveal">
+          <span class="checklist-icon">☑️</span>
+          <div class="checklist-content">
+            <h4>4. BUILD ORDER</h4>
+            <p class="handwriting" style="font-size: 1.2rem;">⚠️ Safety checks FIRST, fancy features LATER</p>
+            <div style="margin-top: 1rem; font-family: var(--font-sketch);">
+              <p>1. Basic input validation ← <span style="color: var(--marker-green);">Start here!</span></p>
+              <p>2. Core functionality</p>
+              <p>3. Error handling</p>
+              <p>4. Nice-to-haves</p>
+            </div>
+          </div>
+        </li>
+
+        <!-- 5. Verification -->
+        <li class="checklist-item reveal">
+          <span class="checklist-icon">☑️</span>
+          <div class="checklist-content">
+            <h4>5. VERIFICATION</h4>
+            <p class="handwriting" style="font-size: 1.2rem;">"How do you KNOW it worked?"</p>
+            <p class="example-good" style="margin-top: 0.5rem;">
+              ✓ "When I input this sample email, I expect a response that mentions our return policy"
+            </p>
+          </div>
+        </li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- Quick Summary -->
+  <section id="summary">
+    <div class="container" style="text-align: center;">
+      <h2 class="reveal">The Planning Checklist</h2>
+
+      <div class="template-box reveal" style="text-align: left;">
+        <div class="template-field">
+          <label>📌 PROBLEM:</label>
+          <p class="handwriting">"What specific pain are we solving?"</p>
+        </div>
+
+        <div class="template-field">
+          <label>🎯 SUCCESS =</label>
+          <p class="handwriting">"How will we know when it's done?"</p>
+        </div>
+
+        <div class="template-field">
+          <label>🧩 PIECES:</label>
+          <p class="handwriting">"What are the small, independent modules?"</p>
+        </div>
+
+        <div class="template-field">
+          <label>📋 BUILD ORDER:</label>
+          <p class="handwriting">"What must work before what?"</p>
+        </div>
+
+        <div class="template-field">
+          <label>✅ TEST:</label>
+          <p class="handwriting">"What proves each piece works?"</p>
+        </div>
+      </div>
+
+      <p class="handwriting reveal" style="font-size: 1.6rem; margin-top: 2rem; color: var(--marker-green);">
+        This is what AI needs. Not code — a clear plan!
+      </p>
+
+      <div style="margin-top: 3rem;" class="reveal">
+        <a href="bmad.html" class="btn btn-primary">See It In Action →</a>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <p>Session 2: The Art of Planning | <a href="bmad.html">Next: BMAD Method →</a></p>
+  </footer>
+
+  <script src="../js/main.js"></script>
+</body>
+</html>
