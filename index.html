@@ -5,7 +5,42 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Session 2: The Art of Planning | AI Hackathon</title>
   <link rel="stylesheet" href="css/styles.css">
-  <meta name="description" content="How I Stopped Fighting AI and Started Shipping - A 60-minute journey from 'I Can't' to 'I'm Building'">
+  <meta name="description" content="An interactive session on planning with AI - from inspiration to action">
+  <style>
+    .engagement-question {
+      background: var(--marker-blue);
+      color: white;
+      padding: 1.5rem 2rem;
+      border-radius: 12px;
+      font-family: var(--font-headline);
+      font-size: 1.5rem;
+      text-align: center;
+      max-width: 700px;
+      margin: 2rem auto;
+      box-shadow: 6px 6px 0 var(--marker-black);
+      position: relative;
+    }
+    .engagement-question::before {
+      content: "🎤";
+      position: absolute;
+      top: -15px;
+      left: 20px;
+      font-size: 1.5rem;
+      background: var(--bg-cream);
+      padding: 0.3rem;
+      border-radius: 50%;
+    }
+    .interactive-badge {
+      display: inline-block;
+      background: var(--marker-green);
+      color: white;
+      padding: 0.5rem 1.5rem;
+      border-radius: 20px;
+      font-family: var(--font-sketch);
+      font-size: 1.1rem;
+      margin-bottom: 1rem;
+    }
+  </style>
 </head>
 <body>
   <!-- Navigation -->
@@ -33,24 +68,58 @@
   <!-- Hero Section -->
   <section id="hero" class="hero">
     <div class="container">
-      <div class="hand-drawn-box reveal" style="display: inline-block; margin-bottom: 2rem;">
-        <span style="font-family: var(--font-handwriting); font-size: 1.2rem; color: var(--marker-orange);">TODAY</span>
-      </div>
+      <span class="interactive-badge reveal">Interactive Session — Your Input Matters</span>
 
       <h1 class="reveal">SESSION 2: The Art of Planning</h1>
 
       <p class="subtitle reveal" style="animation-delay: 0.2s;">
-        "How I Stopped Fighting AI and Started Shipping"
+        Inspiration, Ideas & What's Possible with AI
       </p>
 
       <div class="meta reveal" style="animation-delay: 0.4s;">
         <span>📍 60 minutes</span>
         <span>👤 Longy</span>
-        <span>🎯 Planning > Coding</span>
+        <span>💬 Questions welcome throughout</span>
       </div>
 
-      <div style="margin-top: 3rem;" class="reveal" style="animation-delay: 0.6s;">
-        <a href="pages/journey.html" class="btn btn-primary">Start the Journey →</a>
+      <div class="hand-drawn-box reveal" style="max-width: 550px; margin: 2rem auto; padding: 1.5rem;">
+        <p class="handwriting" style="font-size: 1.3rem; text-align: center;">
+          This session works best when you <span class="underline-marker green">chip in</span> — share experiences, ask questions, challenge ideas.
+        </p>
+      </div>
+
+      <div style="margin-top: 2rem;" class="reveal">
+        <a href="pages/journey.html" class="btn btn-primary">Let's Go →</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- First Engagement -->
+  <section id="first-check">
+    <div class="container">
+      <h2 class="reveal" style="text-align: center; margin-bottom: 2rem;">Before We Start...</h2>
+
+      <div class="engagement-question reveal">
+        Who has used ChatGPT, Claude, or similar AI tools?
+      </div>
+
+      <div class="engagement-question reveal" style="animation-delay: 0.2s;">
+        Who has tried to BUILD something with AI — not just ask questions?
+      </div>
+
+      <div class="engagement-question reveal" style="animation-delay: 0.4s;">
+        Who has built something outside of work — a personal project?
+      </div>
+
+      <div class="engagement-question reveal" style="animation-delay: 0.6s;">
+        Who has hit a wall — tried something and it got messy?
+      </div>
+
+      <div class="sticky-note reveal" style="margin: 2rem auto; max-width: 450px; transform: rotate(1deg);">
+        <p style="font-size: 1.2rem;">
+          <strong>Why these questions?</strong><br>
+          They help us pitch this right. Whether you're brand new or have battle scars — you're in the right place.
+        </p>
       </div>
     </div>
   </section>
@@ -63,7 +132,7 @@
         <span class="quote-author">— Andrej Karpathy, Co-founder of OpenAI, 2025</span>
       </div>
 
-      <div class="sticky-note blue reveal" style="margin: 0 auto; max-width: 400px; animation-delay: 0.3s;">
+      <div class="sticky-note blue reveal" style="margin: 0 auto; max-width: 400px;">
         <p>"The hottest new programming language is <span class="circled">English</span>."</p>
         <span class="quote-author">— Karpathy, 2023</span>
       </div>
@@ -73,50 +142,46 @@
   <!-- The Agenda -->
   <section id="agenda">
     <div class="container">
-      <h2 class="reveal" style="text-align: center; margin-bottom: 3rem;">The Journey</h2>
+      <h2 class="reveal" style="text-align: center; margin-bottom: 3rem;">What We'll Cover</h2>
 
       <div class="flow-container reveal">
         <div class="flow-box">
-          <div style="font-size: 2rem;">😰</div>
-          <strong>I WAS YOU</strong>
-          <div class="handwriting" style="font-size: 1rem;">13 min</div>
-          <div style="font-size: 0.9rem; color: var(--marker-blue);">"The crash"</div>
+          <div style="font-size: 2rem;">💡</div>
+          <strong>MY JOURNEY</strong>
+          <div style="font-size: 0.9rem; color: var(--marker-blue);">"What I discovered"</div>
         </div>
 
         <span class="flow-arrow">→</span>
 
         <div class="flow-box">
-          <div style="font-size: 2rem;">💡</div>
-          <strong>WHAT AI NEEDS</strong>
-          <div class="handwriting" style="font-size: 1rem;">15 min</div>
-          <div style="font-size: 0.9rem; color: var(--marker-blue);">"The framework"</div>
+          <div style="font-size: 2rem;">📋</div>
+          <strong>THE FRAMEWORK</strong>
+          <div style="font-size: 0.9rem; color: var(--marker-blue);">"6 things AI needs"</div>
         </div>
 
         <span class="flow-arrow">→</span>
 
         <div class="flow-box highlight">
           <div style="font-size: 2rem;">🎬</div>
-          <strong>BMAD IN ACTION</strong>
-          <div class="handwriting" style="font-size: 1rem;">12 min (VIDEO)</div>
-          <div style="font-size: 0.9rem; color: var(--marker-orange);">"Planning IRL"</div>
+          <strong>BMAD DEMO</strong>
+          <div style="font-size: 0.9rem; color: var(--marker-orange);">"See it in action"</div>
         </div>
 
         <span class="flow-arrow">→</span>
 
         <div class="flow-box">
-          <div style="font-size: 2rem;">🚀</div>
-          <strong>YOU BUILD</strong>
-          <div class="handwriting" style="font-size: 1rem;">20 min</div>
-          <div style="font-size: 0.9rem; color: var(--marker-green);">"Your turn"</div>
+          <div style="font-size: 2rem;">✏️</div>
+          <strong>YOUR TURN</strong>
+          <div style="font-size: 0.9rem; color: var(--marker-green);">"Try it yourself"</div>
         </div>
       </div>
 
       <div style="text-align: center; margin-top: 3rem;" class="reveal">
-        <p class="handwriting" style="font-size: 1.5rem;">
-          You walk in thinking <span class="crossed-out">"I'm not technical enough."</span>
+        <p class="handwriting" style="font-size: 1.6rem; color: var(--marker-blue);">
+          This isn't about turning you into developers.
         </p>
         <p class="handwriting" style="font-size: 1.8rem; color: var(--marker-green); margin-top: 1rem;">
-          You walk out knowing: <strong>The secret isn't coding — it's planning.</strong>
+          It's about showing you <strong>what's possible</strong> — so you can explore.
         </p>
       </div>
     </div>
@@ -126,25 +191,29 @@
   <section id="promise">
     <div class="container" style="text-align: center;">
       <div class="hand-drawn-box reveal" style="max-width: 600px; margin: 0 auto;">
-        <h3 style="margin-bottom: 1.5rem; color: var(--marker-blue);">What You'll Discover</h3>
+        <h3 style="margin-bottom: 1.5rem; color: var(--marker-blue);">What You'll Take Away</h3>
 
         <div style="text-align: left;">
           <p class="handwriting" style="font-size: 1.4rem; margin-bottom: 1rem;">
-            ✓ Why my "quick weekend project" became a 20-hour nightmare
+            ✓ A real story of building with AI — the mess and the breakthroughs
           </p>
           <p class="handwriting" style="font-size: 1.4rem; margin-bottom: 1rem;">
-            ✓ The 5 things AI actually needs from you (none of them are code)
+            ✓ A simple framework for planning AI projects (6 questions)
           </p>
           <p class="handwriting" style="font-size: 1.4rem; margin-bottom: 1rem;">
-            ✓ A proven method that turns ideas into working software
+            ✓ Awareness of tools and approaches you didn't know existed
           </p>
           <p class="handwriting" style="font-size: 1.4rem;">
-            ✓ How to start building TODAY — not "someday when you learn to code"
+            ✓ A hands-on exercise you'll actually do, not just watch
           </p>
         </div>
       </div>
 
-      <div style="margin-top: 3rem;" class="reveal">
+      <div class="engagement-question reveal" style="margin-top: 3rem;">
+        Any burning questions before we dive in?
+      </div>
+
+      <div style="margin-top: 2rem;" class="reveal">
         <a href="pages/journey.html" class="btn">Let's Begin →</a>
       </div>
     </div>

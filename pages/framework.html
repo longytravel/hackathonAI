@@ -5,6 +5,58 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>The Framework | Session 2: The Art of Planning</title>
   <link rel="stylesheet" href="../css/styles.css">
+  <style>
+    .engagement-question {
+      background: var(--marker-blue);
+      color: white;
+      padding: 1.5rem 2rem;
+      border-radius: 12px;
+      font-family: var(--font-headline);
+      font-size: 1.4rem;
+      text-align: center;
+      max-width: 700px;
+      margin: 2rem auto;
+      box-shadow: 6px 6px 0 var(--marker-black);
+      position: relative;
+    }
+    .engagement-question::before {
+      content: "🎤";
+      position: absolute;
+      top: -15px;
+      left: 20px;
+      font-size: 1.5rem;
+      background: var(--bg-cream);
+      padding: 0.3rem;
+      border-radius: 50%;
+    }
+    .spectrum-table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 2rem 0;
+      font-family: var(--font-sketch);
+    }
+    .spectrum-table th, .spectrum-table td {
+      padding: 1rem;
+      text-align: left;
+      border-bottom: 2px solid var(--marker-black);
+    }
+    .spectrum-table th {
+      font-family: var(--font-headline);
+      background: var(--bg-paper);
+    }
+    .failure-card {
+      background: #fef2f2;
+      border-left: 4px solid var(--marker-red);
+      padding: 1rem 1.5rem;
+      margin-bottom: 1rem;
+      border-radius: 0 8px 8px 0;
+    }
+    .failure-card h4 {
+      color: var(--marker-red);
+      font-family: var(--font-headline);
+      margin-bottom: 0.5rem;
+    }
+  </style>
 </head>
 <body>
   <!-- Navigation -->
@@ -30,54 +82,31 @@
   <!-- The Mindset Shift -->
   <section id="mindset">
     <div class="container" style="text-align: center;">
-      <h1 class="reveal">What AI Actually Needs</h1>
+      <h1 class="reveal">The Mindset Shift</h1>
       <p class="subtitle reveal" style="font-family: var(--font-handwriting); font-size: 1.8rem; color: var(--marker-blue);">
-        The revelation, the framework, the mindset shift
+        You're not the coder. You're the architect.
       </p>
 
       <!-- The Big Reveal -->
-      <div style="margin: 4rem 0;">
+      <div style="margin: 3rem 0;">
         <div class="reveal" style="margin-bottom: 2rem;">
           <p class="handwriting" style="font-size: 2rem;">
             <span class="crossed-out">You = Coder</span> ❌
           </p>
         </div>
 
-        <div class="reveal" style="animation-delay: 0.3s;">
+        <div class="reveal">
           <p style="font-family: var(--font-headline); font-size: 3rem; color: var(--marker-blue);">
             YOU = ARCHITECT ✓
           </p>
           <p style="font-family: var(--font-headline); font-size: 2rem; color: var(--marker-black); margin-top: 0.5rem;">
-            AI = DEVELOPER
+            AI = BUILDER
           </p>
         </div>
       </div>
 
-      <!-- The Flow -->
-      <div class="flow-container reveal" style="margin: 3rem 0;">
-        <div class="flow-box">
-          <div style="font-size: 2rem;">📐</div>
-          <strong>YOU</strong>
-          <div class="handwriting">"Design"</div>
-        </div>
-        <span class="flow-arrow">→</span>
-        <div class="flow-box">
-          <div style="font-size: 2rem;">📝</div>
-          <strong>BLUEPRINT</strong>
-          <div class="handwriting">"Specify"</div>
-        </div>
-        <span class="flow-arrow">→</span>
-        <div class="flow-box">
-          <div style="font-size: 2rem;">🤖</div>
-          <strong>AI</strong>
-          <div class="handwriting">"Execute"</div>
-        </div>
-        <span class="flow-arrow">→</span>
-        <div class="flow-box">
-          <div style="font-size: 2rem;">💻</div>
-          <strong>CODE</strong>
-          <div class="handwriting">"Ship"</div>
-        </div>
+      <div class="engagement-question reveal">
+        Does this framing make sense? Any reactions?
       </div>
 
       <div class="sticky-note green reveal" style="margin: 2rem auto; max-width: 500px;">
@@ -87,84 +116,179 @@
     </div>
   </section>
 
-  <!-- The 5 Things -->
-  <section id="five-things">
+  <!-- Planning Spectrum -->
+  <section id="spectrum">
     <div class="container">
-      <h2 class="reveal" style="text-align: center; margin-bottom: 3rem;">
-        5 Things AI Needs From You
+      <h2 class="reveal" style="text-align: center; margin-bottom: 1rem;">The Planning Spectrum</h2>
+      <p class="handwriting reveal" style="text-align: center; font-size: 1.4rem; margin-bottom: 2rem;">
+        Not everything needs the same level of planning
+      </p>
+
+      <div class="hand-drawn-box reveal" style="max-width: 800px; margin: 0 auto; overflow-x: auto;">
+        <table class="spectrum-table">
+          <thead>
+            <tr>
+              <th>Complexity</th>
+              <th>What You Need</th>
+              <th>Example</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><strong style="color: var(--marker-green);">Simple</strong></td>
+              <td>Good prompt, clear ask</td>
+              <td>"Summarise this email"</td>
+            </tr>
+            <tr>
+              <td><strong style="color: var(--marker-blue);">Medium</strong></td>
+              <td>Quick plan — what goes in, what comes out, what's success</td>
+              <td>"Draft responses to common complaints"</td>
+            </tr>
+            <tr>
+              <td><strong style="color: var(--marker-orange);">Complex</strong></td>
+              <td>Structured approach, documents, maybe multiple agents</td>
+              <td>"Build a system that handles complaints end-to-end"</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div class="sticky-note reveal" style="margin: 2rem auto; max-width: 500px; transform: rotate(1deg);">
+        <p style="font-size: 1.3rem;">
+          <strong>The key:</strong> Match your planning to your complexity.<br><br>
+          Don't over-engineer simple stuff.<br>
+          Don't under-plan complex stuff.
+        </p>
+      </div>
+
+      <div class="engagement-question reveal">
+        Think of something you've tried with AI — where would it sit on this spectrum?
+      </div>
+    </div>
+  </section>
+
+  <!-- Common Failure Modes -->
+  <section id="failures">
+    <div class="container">
+      <h2 class="reveal" style="text-align: center; margin-bottom: 1rem;">Where Things Go Wrong</h2>
+      <p class="handwriting reveal" style="text-align: center; font-size: 1.4rem; margin-bottom: 2rem; color: var(--marker-red);">
+        I made all of these mistakes. Learn from my pain!
+      </p>
+
+      <div style="max-width: 700px; margin: 0 auto;">
+        <div class="failure-card reveal">
+          <h4>1. "Just One More Thing" Syndrome</h4>
+          <p class="handwriting">Scope keeps growing. AI loses track. You lose track. Chaos.</p>
+        </div>
+
+        <div class="failure-card reveal">
+          <h4>2. No Shared Context</h4>
+          <p class="handwriting">AI forgets what you agreed 10 prompts ago. You're constantly re-explaining.</p>
+        </div>
+
+        <div class="failure-card reveal">
+          <h4>3. Copy-Paste Chaos</h4>
+          <p class="handwriting">Moving code between tools. Losing formatting. Indentation hell.</p>
+        </div>
+
+        <div class="failure-card reveal">
+          <h4>4. Too Deep to Restart</h4>
+          <p class="handwriting">Invested so much time you can't explore better approaches.</p>
+        </div>
+
+        <div class="failure-card reveal">
+          <h4>5. No Verification</h4>
+          <p class="handwriting">It looks right... but does it actually work? You can't tell.</p>
+        </div>
+      </div>
+
+      <div class="engagement-question reveal">
+        Has anyone experienced any of these? Which one hurts most?
+      </div>
+    </div>
+  </section>
+
+  <!-- The 6 Questions -->
+  <section id="six-questions">
+    <div class="container">
+      <h2 class="reveal" style="text-align: center; margin-bottom: 1rem;">
+        6 Questions AI Needs You To Answer
       </h2>
       <p class="handwriting reveal" style="text-align: center; font-size: 1.4rem; margin-bottom: 2rem; color: var(--marker-blue);">
-        (None of them are code!)
+        (None of them are about code!)
       </p>
 
       <ul class="checklist">
-        <!-- 1. Clear Problem Statement -->
+        <!-- 1. Problem -->
         <li class="checklist-item reveal">
-          <span class="checklist-icon">☑️</span>
+          <span class="checklist-icon">1️⃣</span>
           <div class="checklist-content">
-            <h4>1. CLEAR PROBLEM STATEMENT</h4>
+            <h4>PROBLEM — "What's the pain?"</h4>
             <p class="example-bad">❌ "Build me a cool AI tool"</p>
-            <p class="example-good">✓ "Customer service wastes 3hrs/day on repeat emails. I want to auto-draft responses."</p>
+            <p class="example-good">✓ "Customer service wastes 3hrs/day on repeat emails"</p>
           </div>
         </li>
 
-        <!-- 2. Small Pieces -->
+        <!-- 2. Success -->
         <li class="checklist-item reveal">
-          <span class="checklist-icon">☑️</span>
+          <span class="checklist-icon">2️⃣</span>
           <div class="checklist-content">
-            <h4>2. SMALL PIECES (MODULES)</h4>
-            <p class="handwriting" style="font-size: 1.2rem;">Break it down into bite-sized chunks:</p>
+            <h4>SUCCESS — "What does done look like?"</h4>
+            <p class="example-bad">❌ "Make it good"</p>
+            <p class="example-good">✓ "Draft responses are ready in under 30 seconds with 80% accuracy"</p>
+          </div>
+        </li>
+
+        <!-- 3. Boundaries -->
+        <li class="checklist-item reveal">
+          <span class="checklist-icon">3️⃣</span>
+          <div class="checklist-content">
+            <h4>BOUNDARIES — "What's NOT included?"</h4>
+            <p class="handwriting" style="font-size: 1.2rem;">This stops "just one more thing" syndrome!</p>
+            <p class="example-good">✓ "We're NOT handling complaints that need manager escalation — that's phase 2"</p>
+          </div>
+        </li>
+
+        <!-- 4. Pieces -->
+        <li class="checklist-item reveal">
+          <span class="checklist-icon">4️⃣</span>
+          <div class="checklist-content">
+            <h4>PIECES — "What are the parts?"</h4>
+            <p class="handwriting" style="font-size: 1.2rem;">Break it into smaller chunks:</p>
             <div class="flow-container" style="justify-content: flex-start; padding: 1rem 0;">
-              <div class="flow-box" style="min-width: 100px; font-size: 0.9rem;">Email Reader</div>
+              <div class="flow-box" style="min-width: 90px; font-size: 0.85rem; padding: 0.5rem;">Read Email</div>
               <span class="flow-arrow">→</span>
-              <div class="flow-box" style="min-width: 100px; font-size: 0.9rem;">Topic Detector</div>
+              <div class="flow-box" style="min-width: 90px; font-size: 0.85rem; padding: 0.5rem;">Find Topic</div>
               <span class="flow-arrow">→</span>
-              <div class="flow-box" style="min-width: 100px; font-size: 0.9rem;">Response Gen</div>
+              <div class="flow-box" style="min-width: 90px; font-size: 0.85rem; padding: 0.5rem;">Draft Reply</div>
               <span class="flow-arrow">→</span>
-              <div class="flow-box" style="min-width: 100px; font-size: 0.9rem;">Quality Check</div>
+              <div class="flow-box" style="min-width: 90px; font-size: 0.85rem; padding: 0.5rem;">Check Quality</div>
             </div>
           </div>
         </li>
 
-        <!-- 3. Inputs & Outputs -->
+        <!-- 5. Order -->
         <li class="checklist-item reveal">
-          <span class="checklist-icon">☑️</span>
+          <span class="checklist-icon">5️⃣</span>
           <div class="checklist-content">
-            <h4>3. INPUTS & OUTPUTS (CONTRACTS)</h4>
-            <p class="handwriting" style="font-size: 1.2rem;">What goes in? What comes out?</p>
-            <div class="hand-drawn-box" style="margin-top: 1rem; padding: 1rem;">
-              <p style="font-family: var(--font-sketch);">
-                <strong>Takes:</strong> Raw email text (string)<br>
-                <strong>Produces:</strong> Drafted response + confidence score (0-100)
-              </p>
+            <h4>ORDER — "What depends on what?"</h4>
+            <p class="handwriting" style="font-size: 1.2rem;">What must work before what?</p>
+            <div style="margin-top: 0.5rem; font-family: var(--font-sketch);">
+              <p>1. Read email works ← <span style="color: var(--marker-green);">Start here</span></p>
+              <p>2. Topic detection works</p>
+              <p>3. Draft generation works</p>
+              <p>4. Quality checks work</p>
             </div>
           </div>
         </li>
 
-        <!-- 4. Build Order -->
+        <!-- 6. Test -->
         <li class="checklist-item reveal">
-          <span class="checklist-icon">☑️</span>
+          <span class="checklist-icon">6️⃣</span>
           <div class="checklist-content">
-            <h4>4. BUILD ORDER</h4>
-            <p class="handwriting" style="font-size: 1.2rem;">⚠️ Safety checks FIRST, fancy features LATER</p>
-            <div style="margin-top: 1rem; font-family: var(--font-sketch);">
-              <p>1. Basic input validation ← <span style="color: var(--marker-green);">Start here!</span></p>
-              <p>2. Core functionality</p>
-              <p>3. Error handling</p>
-              <p>4. Nice-to-haves</p>
-            </div>
-          </div>
-        </li>
-
-        <!-- 5. Verification -->
-        <li class="checklist-item reveal">
-          <span class="checklist-icon">☑️</span>
-          <div class="checklist-content">
-            <h4>5. VERIFICATION</h4>
-            <p class="handwriting" style="font-size: 1.2rem;">"How do you KNOW it worked?"</p>
-            <p class="example-good" style="margin-top: 0.5rem;">
-              ✓ "When I input this sample email, I expect a response that mentions our return policy"
-            </p>
+            <h4>TEST — "How do we prove it works?"</h4>
+            <p class="handwriting" style="font-size: 1.2rem;">For each piece, how do you verify it?</p>
+            <p class="example-good">✓ "When I input this sample complaint about delivery, I expect a response mentioning our refund policy"</p>
           </div>
         </li>
       </ul>
@@ -174,37 +298,46 @@
   <!-- Quick Summary -->
   <section id="summary">
     <div class="container" style="text-align: center;">
-      <h2 class="reveal">The Planning Checklist</h2>
+      <h2 class="reveal">The 6-Question Checklist</h2>
 
       <div class="template-box reveal" style="text-align: left;">
         <div class="template-field">
-          <label>📌 PROBLEM:</label>
-          <p class="handwriting">"What specific pain are we solving?"</p>
+          <label>1. PROBLEM:</label>
+          <p class="handwriting">"What's the pain we're solving?"</p>
         </div>
 
         <div class="template-field">
-          <label>🎯 SUCCESS =</label>
-          <p class="handwriting">"How will we know when it's done?"</p>
+          <label>2. SUCCESS:</label>
+          <p class="handwriting">"What does 'done' look like?"</p>
         </div>
 
         <div class="template-field">
-          <label>🧩 PIECES:</label>
-          <p class="handwriting">"What are the small, independent modules?"</p>
+          <label>3. BOUNDARIES:</label>
+          <p class="handwriting">"What's NOT included?"</p>
         </div>
 
         <div class="template-field">
-          <label>📋 BUILD ORDER:</label>
-          <p class="handwriting">"What must work before what?"</p>
+          <label>4. PIECES:</label>
+          <p class="handwriting">"What are the parts?"</p>
         </div>
 
         <div class="template-field">
-          <label>✅ TEST:</label>
-          <p class="handwriting">"What proves each piece works?"</p>
+          <label>5. ORDER:</label>
+          <p class="handwriting">"What must work first?"</p>
+        </div>
+
+        <div class="template-field">
+          <label>6. TEST:</label>
+          <p class="handwriting">"How do we prove each part works?"</p>
         </div>
       </div>
 
+      <div class="engagement-question reveal">
+        Which of these 6 do you think people skip most often?
+      </div>
+
       <p class="handwriting reveal" style="font-size: 1.6rem; margin-top: 2rem; color: var(--marker-green);">
-        This is what AI needs. Not code — a clear plan!
+        This is what AI needs. Not code — <span class="underline-marker green">clarity</span>.
       </p>
 
       <div style="margin-top: 3rem;" class="reveal">
