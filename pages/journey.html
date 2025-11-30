@@ -53,6 +53,29 @@
       color: var(--marker-red);
       font-size: 1.5rem;
     }
+    .engagement-question {
+      background: var(--marker-blue);
+      color: white;
+      padding: 1.5rem 2rem;
+      border-radius: 12px;
+      font-family: var(--font-headline);
+      font-size: 1.4rem;
+      text-align: center;
+      max-width: 700px;
+      margin: 1.5rem auto;
+      box-shadow: 6px 6px 0 var(--marker-black);
+      position: relative;
+    }
+    .engagement-question::before {
+      content: "🎤";
+      position: absolute;
+      top: -15px;
+      left: 20px;
+      font-size: 1.5rem;
+      background: var(--bg-cream);
+      padding: 0.3rem;
+      border-radius: 50%;
+    }
   </style>
 </head>
 <body>
@@ -75,6 +98,39 @@
   <div class="keyboard-hint">
     <kbd>←</kbd> <kbd>→</kbd> Navigate
   </div>
+
+  <!-- Audience Check-In -->
+  <section id="check-in">
+    <div class="container">
+      <h1 class="reveal" style="text-align: center;">Before I Share My Story...</h1>
+      <p class="handwriting reveal" style="text-align: center; font-size: 1.4rem; margin-bottom: 2rem; color: var(--marker-blue);">
+        Quick check — where are we all starting from?
+      </p>
+
+      <div class="engagement-question reveal">
+        Who has used ChatGPT, Claude, or similar AI tools?
+      </div>
+
+      <div class="engagement-question reveal">
+        Who has tried to BUILD something with AI — not just ask questions?
+      </div>
+
+      <div class="engagement-question reveal">
+        Who has built something outside of work — a personal project?
+      </div>
+
+      <div class="engagement-question reveal">
+        Who has hit a wall — tried something and it got messy?
+      </div>
+
+      <div class="sticky-note reveal" style="margin: 2rem auto; max-width: 450px; transform: rotate(1deg);">
+        <p style="font-size: 1.2rem;">
+          <strong>Why these questions?</strong><br>
+          Whether you're brand new or have battle scars — you're in the right place. This helps me pitch it right.
+        </p>
+      </div>
+    </div>
+  </section>
 
   <!-- The Discovery -->
   <section id="discovery">
