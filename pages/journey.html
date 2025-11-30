@@ -5,6 +5,55 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>The Journey | Session 2: The Art of Planning</title>
   <link rel="stylesheet" href="../css/styles.css">
+  <style>
+    .screenshot-container {
+      max-width: 900px;
+      margin: 2rem auto;
+      border: 4px solid var(--marker-black);
+      border-radius: 12px;
+      overflow: hidden;
+      box-shadow: 8px 8px 0 var(--marker-blue);
+      position: relative;
+    }
+    .screenshot-container img {
+      width: 100%;
+      display: block;
+    }
+    .screenshot-label {
+      position: absolute;
+      top: -15px;
+      left: 20px;
+      background: var(--sticky-green);
+      padding: 0.5rem 1rem;
+      font-family: var(--font-handwriting);
+      font-size: 1.1rem;
+      border-radius: 4px;
+      transform: rotate(-2deg);
+    }
+    .workflow-pain {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 0.5rem;
+      flex-wrap: wrap;
+      padding: 1rem;
+      background: rgba(220, 38, 38, 0.1);
+      border-radius: 8px;
+      margin: 1rem 0;
+    }
+    .workflow-step {
+      background: var(--bg-paper);
+      border: 2px solid var(--marker-black);
+      padding: 0.5rem 1rem;
+      border-radius: 4px;
+      font-family: var(--font-sketch);
+      font-size: 0.95rem;
+    }
+    .workflow-arrow {
+      color: var(--marker-red);
+      font-size: 1.5rem;
+    }
+  </style>
 </head>
 <body>
   <!-- Navigation -->
@@ -32,7 +81,7 @@
     <div class="container">
       <h1 class="reveal">I Was You</h1>
       <p class="subtitle reveal" style="text-align: center; font-family: var(--font-handwriting); font-size: 1.8rem; color: var(--marker-blue);">
-        The confession, the crash, the 20-hour nightmare
+        A real story. A real mess. A real breakthrough.
       </p>
 
       <div class="sticky-note reveal" style="margin: 3rem auto; max-width: 500px;">
@@ -50,12 +99,84 @@
     </div>
   </section>
 
-  <!-- The Disaster Story -->
-  <section id="disaster">
+  <!-- The Challenge from Paul -->
+  <section id="challenge">
     <div class="container">
-      <h2 class="reveal" style="text-align: center; margin-bottom: 1rem;">My 20-Hour Nightmare</h2>
+      <h2 class="reveal" style="text-align: center; margin-bottom: 1rem;">Then Paul Asked Me Something</h2>
+
+      <div class="sticky-note blue reveal" style="margin: 2rem auto; max-width: 550px; transform: rotate(1deg);">
+        <p style="font-size: 1.3rem;">
+          <strong>"Can you help us transform boring bank letters into personalized communications?"</strong>
+        </p>
+        <p style="margin-top: 1rem; font-size: 1.1rem;">
+          Voice notes for digital customers. SMS for busy people. Make it personal. Save money. Improve experience.
+        </p>
+      </div>
+
+      <p class="handwriting reveal" style="text-align: center; font-size: 1.5rem; margin: 2rem 0;">
+        We had a workshop in Leeds. Everyone was excited.
+      </p>
+
+      <div class="hand-drawn-box reveal" style="max-width: 500px; margin: 0 auto; text-align: center;">
+        <p style="font-family: var(--font-headline); font-size: 1.8rem; color: var(--marker-green);">
+          "This will be easy!"
+        </p>
+        <p class="handwriting" style="margin-top: 0.5rem; font-size: 1.2rem;">
+          (Narrator: It was not easy.)
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- The Messy Workflow -->
+  <section id="messy-workflow">
+    <div class="container">
+      <h2 class="reveal" style="text-align: center; margin-bottom: 1rem;">My "Workflow"</h2>
+      <p class="handwriting reveal" style="text-align: center; font-size: 1.4rem; margin-bottom: 2rem; color: var(--marker-red);">
+        (If you can call it that)
+      </p>
+
+      <div class="hand-drawn-box reveal" style="max-width: 800px; margin: 0 auto;">
+        <p class="handwriting" style="font-size: 1.2rem; margin-bottom: 1rem; text-align: center;">
+          I was using Claude (the chat interface) and an IDE. Here's how it went:
+        </p>
+
+        <div class="workflow-pain">
+          <span class="workflow-step">Ask Claude to write code</span>
+          <span class="workflow-arrow">→</span>
+          <span class="workflow-step">Copy the code</span>
+          <span class="workflow-arrow">→</span>
+          <span class="workflow-step">Paste into VS Code</span>
+          <span class="workflow-arrow">→</span>
+          <span class="workflow-step">Run it</span>
+          <span class="workflow-arrow">→</span>
+          <span class="workflow-step" style="background: #fecaca;">ERROR!</span>
+          <span class="workflow-arrow">→</span>
+          <span class="workflow-step">Copy error back to Claude</span>
+          <span class="workflow-arrow">→</span>
+          <span class="workflow-step" style="background: var(--sticky-yellow);">Repeat forever...</span>
+        </div>
+
+        <div class="sticky-note pink reveal" style="margin: 1.5rem auto 0; max-width: 450px; transform: rotate(-1deg);">
+          <p style="font-size: 1.2rem;">
+            The worst part? <strong>Python cares about indentation.</strong><br><br>
+            I wasn't technical enough to even paste code properly. Spaces and tabs were breaking everything!
+          </p>
+        </div>
+      </div>
+
+      <p class="handwriting reveal" style="text-align: center; font-size: 1.4rem; margin-top: 2rem;">
+        I didn't know about <span class="underline-marker blue">Claude Code</span> or better tools at this point.
+      </p>
+    </div>
+  </section>
+
+  <!-- The Nightmare Timeline -->
+  <section id="nightmare">
+    <div class="container">
+      <h2 class="reveal" style="text-align: center; margin-bottom: 1rem;">Days Turned Into Weeks</h2>
       <p class="handwriting reveal" style="text-align: center; font-size: 1.4rem; margin-bottom: 3rem;">
-        What was supposed to be a "quick weekend project"...
+        What started as excitement became a nightmare...
       </p>
 
       <!-- Timeline -->
@@ -63,129 +184,161 @@
         <div class="timeline-item">
           <div class="timeline-emoji">😊</div>
           <div class="timeline-dot"></div>
-          <div class="timeline-label">EXCITED</div>
-          <p class="handwriting" style="margin-top: 0.5rem; font-size: 1.1rem;">"Weekend project!"</p>
+          <div class="timeline-label">LEEDS</div>
+          <p class="handwriting" style="margin-top: 0.5rem; font-size: 1.1rem;">"This will be easy!"</p>
         </div>
 
         <div class="timeline-item">
-          <div class="timeline-emoji">😤</div>
+          <div class="timeline-emoji">🔨</div>
           <div class="timeline-dot"></div>
-          <div class="timeline-label">FRUSTRATED</div>
-          <p class="handwriting" style="margin-top: 0.5rem; font-size: 1.1rem;">"1000 lines of spaghetti"</p>
+          <div class="timeline-label">BUILDING</div>
+          <p class="handwriting" style="margin-top: 0.5rem; font-size: 1.1rem;">"Copy, paste, run, error..."</p>
         </div>
 
         <div class="timeline-item danger">
           <div class="timeline-emoji">🔥</div>
           <div class="timeline-dot"></div>
-          <div class="timeline-label">BUG HELL</div>
-          <p class="handwriting" style="margin-top: 0.5rem; font-size: 1.1rem;">"Every fix broke 3 things"</p>
+          <div class="timeline-label">UNWIELDY</div>
+          <p class="handwriting" style="margin-top: 0.5rem; font-size: 1.1rem;">"I keep thinking of more features!"</p>
+        </div>
+
+        <div class="timeline-item danger">
+          <div class="timeline-emoji">😰</div>
+          <div class="timeline-dot"></div>
+          <div class="timeline-label">TOO DEEP</div>
+          <p class="handwriting" style="margin-top: 0.5rem; font-size: 1.1rem;">"Can't explore other methods now"</p>
         </div>
 
         <div class="timeline-item success">
           <div class="timeline-emoji">💡</div>
           <div class="timeline-dot"></div>
           <div class="timeline-label">BREAKTHROUGH</div>
-          <p class="handwriting" style="margin-top: 0.5rem; font-size: 1.1rem;">"I had a PLANNING problem"</p>
-        </div>
-
-        <div class="timeline-item success">
-          <div class="timeline-emoji">✨</div>
-          <div class="timeline-dot"></div>
-          <div class="timeline-label">CLARITY</div>
-          <p class="handwriting" style="margin-top: 0.5rem; font-size: 1.1rem;">"Plan first."</p>
+          <p class="handwriting" style="margin-top: 0.5rem; font-size: 1.1rem;">"I need a Shared Brain!"</p>
         </div>
       </div>
 
-      <!-- Key Insight -->
-      <div class="sticky-note pink reveal" style="margin: 3rem auto; max-width: 500px; text-align: center;">
-        <p style="font-size: 1.8rem;">
-          "I didn't have an AI problem.<br>
-          I had a <span class="underline-marker red" style="font-size: 2rem; font-weight: bold;">PLANNING</span> problem."
+      <div class="hand-drawn-box reveal" style="max-width: 600px; margin: 2rem auto; text-align: center; border-color: var(--marker-red);">
+        <p class="handwriting" style="font-size: 1.3rem;">
+          I was <strong>days</strong> into frustration. Too deep to start over. Too messy to add more features. Every new idea made the code more tangled.
         </p>
       </div>
     </div>
   </section>
 
-  <!-- What Went Wrong -->
-  <section id="what-went-wrong">
+  <!-- The Breakthrough -->
+  <section id="breakthrough">
     <div class="container">
-      <h2 class="reveal" style="text-align: center; margin-bottom: 2rem;">What Actually Happened</h2>
+      <h2 class="reveal" style="text-align: center; margin-bottom: 1rem;">The Breakthrough: "Shared Brain"</h2>
 
-      <div style="max-width: 800px; margin: 0 auto;">
-        <div class="checklist-item reveal">
-          <span class="checklist-icon">1️⃣</span>
-          <div class="checklist-content">
-            <h4>Started Without a Plan</h4>
-            <p class="example-bad">"ChatGPT, build me an app that does everything!"</p>
-          </div>
-        </div>
-
-        <div class="checklist-item reveal">
-          <span class="checklist-icon">2️⃣</span>
-          <div class="checklist-content">
-            <h4>Kept Adding Scope</h4>
-            <p class="example-bad">"Oh, and also add notifications... and user profiles... and analytics..."</p>
-          </div>
-        </div>
-
-        <div class="checklist-item reveal">
-          <span class="checklist-icon">3️⃣</span>
-          <div class="checklist-content">
-            <h4>AI Forgot Context</h4>
-            <p class="example-bad">"Wait, why did you change that function we wrote 10 prompts ago?!"</p>
-          </div>
-        </div>
-
-        <div class="checklist-item reveal">
-          <span class="checklist-icon">4️⃣</span>
-          <div class="checklist-content">
-            <h4>Bug Whack-a-Mole</h4>
-            <p class="example-bad">"Fixed one thing, broke three others. Repeat for 12 hours."</p>
-          </div>
-        </div>
+      <div class="sticky-note green reveal" style="margin: 2rem auto; max-width: 500px; text-align: center;">
+        <p style="font-size: 1.4rem;">
+          "What if AI had ONE document it could always reference?"
+        </p>
+        <p style="margin-top: 1rem; font-size: 1.1rem;">
+          One analysis. One source of truth. All channels use it.
+        </p>
       </div>
-    </div>
-  </section>
 
-  <!-- The Whiteboard Metaphor -->
-  <section id="whiteboard-metaphor">
-    <div class="container">
-      <h2 class="reveal" style="text-align: center; margin-bottom: 2rem;">Why AI "Forgets"</h2>
-      <p class="handwriting reveal" style="text-align: center; font-size: 1.4rem; margin-bottom: 2rem;">
-        Think of AI like a whiteboard with limited space...
+      <p class="handwriting reveal" style="text-align: center; font-size: 1.5rem; margin: 2rem 0;">
+        Instead of each part of the system figuring things out separately...
       </p>
 
+      <!-- The Shared Brain Concept -->
       <div class="hand-drawn-box reveal" style="max-width: 700px; margin: 0 auto;">
-        <h3 style="margin-bottom: 1rem; color: var(--marker-blue);">AI's Context Window</h3>
+        <h3 style="text-align: center; color: var(--marker-blue); margin-bottom: 1.5rem;">The Shared Brain Architecture</h3>
 
-        <div style="background: #eee; border: 2px solid var(--marker-black); border-radius: 8px; padding: 1rem; margin: 1rem 0;">
-          <div style="display: flex; gap: 0.5rem; flex-wrap: wrap;">
-            <span style="background: #ccc; padding: 0.5rem; border-radius: 4px; text-decoration: line-through; opacity: 0.5;">Prompt 1</span>
-            <span style="background: #ccc; padding: 0.5rem; border-radius: 4px; text-decoration: line-through; opacity: 0.5;">Response 1</span>
-            <span style="background: var(--sticky-yellow); padding: 0.5rem; border-radius: 4px;">Prompt 2</span>
-            <span style="background: var(--sticky-green); padding: 0.5rem; border-radius: 4px;">Code...</span>
-            <span style="background: var(--sticky-blue); padding: 0.5rem; border-radius: 4px;">More code...</span>
+        <div class="flow-container">
+          <div class="flow-box" style="background: var(--sticky-yellow);">
+            <div style="font-size: 1.5rem;">📄</div>
+            <strong>Bank Letter</strong>
           </div>
-          <p class="handwriting" style="margin-top: 1rem; color: var(--marker-red);">← Old stuff gets "erased" as new stuff comes in!</p>
+          <span class="flow-arrow">→</span>
+          <div class="flow-box" style="background: var(--sticky-green); border-width: 3px;">
+            <div style="font-size: 1.5rem;">🧠</div>
+            <strong>SHARED BRAIN</strong>
+            <div style="font-size: 0.8rem;">(One analysis)</div>
+          </div>
+          <span class="flow-arrow">→</span>
+          <div style="display: flex; flex-direction: column; gap: 0.5rem;">
+            <div class="flow-box" style="min-width: 80px; padding: 0.5rem;">📧 Email</div>
+            <div class="flow-box" style="min-width: 80px; padding: 0.5rem;">💬 SMS</div>
+            <div class="flow-box" style="min-width: 80px; padding: 0.5rem;">🎤 Voice</div>
+            <div class="flow-box" style="min-width: 80px; padding: 0.5rem;">✉️ Letter</div>
+          </div>
         </div>
 
-        <div class="sticky-note reveal" style="transform: rotate(2deg); margin-top: 1.5rem;">
-          <p style="font-size: 1.2rem;">⚠️ AI forgets what fell off the edge of its context window!</p>
-        </div>
+        <p class="handwriting reveal" style="text-align: center; margin-top: 1.5rem; font-size: 1.2rem; color: var(--marker-green);">
+          AI forgets. But a document? A document doesn't forget.
+        </p>
       </div>
-
-      <p class="handwriting reveal" style="text-align: center; font-size: 1.6rem; margin-top: 2rem; color: var(--marker-green);">
-        Solution? Give AI a <span class="underline-marker green">document</span> it can always reference.
-      </p>
     </div>
   </section>
 
-  <!-- The Realization -->
-  <section id="realization">
-    <div class="container" style="text-align: center;">
-      <h2 class="reveal">The Moment Everything Changed</h2>
+  <!-- What I Built - Screenshot -->
+  <section id="result">
+    <div class="container">
+      <h2 class="reveal" style="text-align: center; margin-bottom: 1rem;">What I Actually Built</h2>
+      <p class="handwriting reveal" style="text-align: center; font-size: 1.4rem; margin-bottom: 2rem;">
+        After all that struggle... it worked.
+      </p>
 
-      <div class="transformation reveal" style="margin: 3rem 0;">
+      <div class="screenshot-container reveal">
+        <span class="screenshot-label">The Real System!</span>
+        <img src="../communicationScreenshot.PNG" alt="Lloyds AI Personalization Engine - showing the modular architecture with Shared Brain, Email, SMS, Letter, and Voice generators">
+      </div>
+
+      <div style="display: flex; flex-wrap: wrap; gap: 1rem; justify-content: center; margin-top: 2rem;">
+        <div class="sticky-note reveal" style="transform: rotate(-2deg); max-width: 200px;">
+          <p style="font-size: 1.1rem;"><strong>Email Generator</strong><br>Personalized subject lines & CTAs</p>
+        </div>
+        <div class="sticky-note blue reveal" style="transform: rotate(1deg); max-width: 200px;">
+          <p style="font-size: 1.1rem;"><strong>SMS Generator</strong><br>160 chars, critical points only</p>
+        </div>
+        <div class="sticky-note green reveal" style="transform: rotate(-1deg); max-width: 200px;">
+          <p style="font-size: 1.1rem;"><strong>Voice Notes</strong><br>AI-generated audio for digital customers</p>
+        </div>
+        <div class="sticky-note pink reveal" style="transform: rotate(2deg); max-width: 200px;">
+          <p style="font-size: 1.1rem;"><strong>Hallucination Detector</strong><br>Catches AI making stuff up!</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- The Lesson -->
+  <section id="lesson">
+    <div class="container" style="text-align: center;">
+      <h2 class="reveal">What I Learned The Hard Way</h2>
+
+      <div class="sticky-note pink reveal" style="margin: 2rem auto; max-width: 500px; text-align: center;">
+        <p style="font-size: 1.6rem;">
+          "I didn't have an AI problem.<br>
+          I had a <span class="underline-marker red" style="font-weight: bold;">PLANNING</span> problem."
+        </p>
+      </div>
+
+      <div class="hand-drawn-box reveal" style="max-width: 650px; margin: 2rem auto; text-align: left;">
+        <h3 style="margin-bottom: 1rem; color: var(--marker-blue);">If I Could Do It Again...</h3>
+        <ul style="list-style: none; padding: 0;">
+          <li class="handwriting" style="font-size: 1.3rem; margin-bottom: 0.8rem;">
+            ✓ I would have <strong>researched the tools</strong> first
+          </li>
+          <li class="handwriting" style="font-size: 1.3rem; margin-bottom: 0.8rem;">
+            ✓ I would have <strong>planned before building</strong>
+          </li>
+          <li class="handwriting" style="font-size: 1.3rem; margin-bottom: 0.8rem;">
+            ✓ I would have used <strong>Claude Code</strong> instead of copy-paste
+          </li>
+          <li class="handwriting" style="font-size: 1.3rem;">
+            ✓ I would have known about <strong>BMAD</strong> and structured methods
+          </li>
+        </ul>
+      </div>
+
+      <p class="handwriting reveal" style="font-size: 1.5rem; margin: 2rem 0; color: var(--marker-green);">
+        The good news? <span class="underline-marker green">Those tools exist now.</span>
+      </p>
+
+      <div class="transformation reveal" style="margin: 2rem 0;">
         <div class="before-after">
           <div class="before">"I need to learn to code"</div>
           <div class="after">I need to learn to PLAN</div>
@@ -198,6 +351,7 @@
 
       <div style="margin-top: 3rem;" class="reveal">
         <a href="framework.html" class="btn btn-primary">Learn the Framework →</a>
+        <a href="exercise.html" class="btn" style="margin-left: 1rem;">See the Tools →</a>
       </div>
     </div>
   </section>
