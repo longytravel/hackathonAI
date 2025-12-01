@@ -40,6 +40,24 @@
       font-size: 1.1rem;
       margin-bottom: 1rem;
     }
+    .session-bridge {
+      background: linear-gradient(135deg, rgba(255, 193, 7, 0.25) 0%, rgba(255, 152, 0, 0.2) 100%);
+      border: 3px dashed var(--marker-orange);
+      border-radius: 30px 10px 30px 10px;
+      padding: 1rem 1.8rem;
+      font-family: var(--font-sketch);
+      font-size: 1.2rem;
+      max-width: 650px;
+      margin: 1.5rem auto;
+      position: relative;
+      transform: rotate(-1deg);
+      box-shadow: 4px 4px 0 rgba(0,0,0,0.1);
+    }
+    .session-bridge .bridge-arrow {
+      font-size: 1.5rem;
+      margin-right: 0.5rem;
+      color: var(--marker-orange);
+    }
   </style>
 </head>
 <body>
@@ -75,6 +93,11 @@
       <p class="subtitle reveal" style="animation-delay: 0.2s;">
         Inspiration, Ideas & What's Possible with AI
       </p>
+
+      <div class="session-bridge reveal" style="animation-delay: 0.3s;">
+        <span class="bridge-arrow">↪</span>
+        In Session 1 you explored <strong>AI agents</strong> — today we'll see them <span class="underline-marker orange">in action</span> and how they can supercharge your planning
+      </div>
 
       <div class="meta reveal" style="animation-delay: 0.4s;">
         <span>📍 60 minutes</span>
