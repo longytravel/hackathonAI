@@ -50,6 +50,7 @@
       font-size: 1.6rem;
     }
     .video-frame video,
+    .video-frame iframe,
     .video-frame .video-placeholder {
       display: block;
       width: 100%;
@@ -57,6 +58,7 @@
       background: var(--marker-black);
       border-radius: 4px;
       object-fit: cover;
+      border: 0;
     }
     .video-placeholder {
       display: flex;
@@ -94,6 +96,7 @@
     .point:nth-child(1) { transform: rotate(-0.7deg); border-top: 6px solid var(--marker-orange); }
     .point:nth-child(2) { transform: rotate(0.6deg); border-top: 6px solid var(--marker-blue); }
     .point:nth-child(3) { transform: rotate(-0.4deg); border-top: 6px solid var(--marker-green); }
+    .point:nth-child(4) { transform: rotate(0.7deg); border-top: 6px solid var(--marker-red); }
     .point .tag {
       font-family: var(--font-sketch);
       font-size: 0.85rem;
@@ -104,6 +107,7 @@
     .point:nth-child(1) .tag { color: var(--marker-orange); }
     .point:nth-child(2) .tag { color: var(--marker-blue); }
     .point:nth-child(3) .tag { color: var(--marker-green); }
+    .point:nth-child(4) .tag { color: var(--marker-red); }
     .point p {
       font-family: var(--font-handwriting);
       font-size: 1.45rem;
@@ -200,6 +204,96 @@
       display: block;
       margin-bottom: 0.15rem;
     }
+
+    /* Why external tools block */
+    .why-external {
+      max-width: 1100px;
+      margin: 3rem auto 0;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 2rem;
+      align-items: stretch;
+    }
+    @media (max-width: 850px) {
+      .why-external { grid-template-columns: 1fr; }
+    }
+    .why-card {
+      background: var(--bg-paper);
+      border: 2px solid var(--marker-black);
+      border-radius: 8px;
+      padding: 1.6rem 1.8rem;
+      box-shadow: 5px 5px 0 rgba(0,0,0,0.12);
+      position: relative;
+    }
+    .why-card.q { border-left: 6px solid var(--marker-orange); }
+    .why-card.a { border-left: 6px solid var(--marker-green); transform: rotate(0.3deg); }
+    .why-card h3 {
+      font-family: var(--font-headline);
+      font-size: 1.5rem;
+      margin-bottom: 0.8rem;
+      line-height: 1.15;
+    }
+    .why-card.q h3 { color: var(--marker-orange); }
+    .why-card.a h3 { color: var(--marker-green); }
+    .why-card p {
+      font-family: var(--font-sketch);
+      font-size: 1.1rem;
+      line-height: 1.55;
+      margin-bottom: 0.7rem;
+    }
+    .why-card p:last-child { margin-bottom: 0; }
+    .why-card strong { color: var(--marker-black); }
+
+    /* Bring-to-Birmingham checklist */
+    .birmingham-list {
+      max-width: 1100px;
+      margin: 3rem auto 0;
+      background: var(--sticky-yellow);
+      border: 2px solid var(--marker-black);
+      border-radius: 8px;
+      padding: 1.8rem 2rem;
+      box-shadow: 6px 6px 0 var(--marker-black);
+      transform: rotate(-0.4deg);
+    }
+    .birmingham-list h3 {
+      font-family: var(--font-headline);
+      font-size: 1.6rem;
+      margin-bottom: 0.4rem;
+      text-align: center;
+    }
+    .birmingham-list .sub {
+      font-family: var(--font-handwriting);
+      font-size: 1.2rem;
+      color: var(--marker-blue);
+      text-align: center;
+      margin-bottom: 1.2rem;
+    }
+    .birmingham-list ul {
+      list-style: none;
+      padding: 0;
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 0.8rem 2rem;
+    }
+    @media (max-width: 700px) {
+      .birmingham-list ul { grid-template-columns: 1fr; }
+    }
+    .birmingham-list li {
+      font-family: var(--font-sketch);
+      font-size: 1.1rem;
+      line-height: 1.4;
+      padding-left: 1.8rem;
+      position: relative;
+    }
+    .birmingham-list li::before {
+      content: "☐";
+      position: absolute;
+      left: 0;
+      top: -0.1rem;
+      font-size: 1.3rem;
+      color: var(--marker-black);
+    }
+    .birmingham-list li strong { color: var(--marker-blue); }
   </style>
 </head>
 <body>
@@ -236,20 +330,12 @@
         <!-- LEFT: video -->
         <div class="reveal">
           <div class="video-frame">
-            <video
-              id="tarquin-video"
-              controls
-              preload="metadata"
-              src="../assets/dr-tarquin.mp4"
-              onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';"
-            ></video>
-            <div class="video-placeholder" style="display:none;">
-              🩺 Dr Tarquin Longbottom
-              <span style="font-family: var(--font-sketch); font-size: 1rem; opacity: 0.7; margin-top: 0.6rem;">
-                drop the HeyGen render at<br>
-                <code style="background: rgba(255,255,255,0.15); padding: 0.1rem 0.4rem; border-radius: 3px;">/assets/dr-tarquin.mp4</code>
-              </span>
-            </div>
+            <iframe
+              src="https://app.heygen.com/embeds/cbd43bb34863496abd4f5269dac00fd7"
+              title="Dr Tarquin Longbottom — Rebaseline"
+              allow="encrypted-media; fullscreen;"
+              allowfullscreen
+            ></iframe>
           </div>
           <p class="video-caption">A 30-second consultation with Dr Tarquin Longbottom.</p>
         </div>
@@ -267,6 +353,10 @@
           <div class="point reveal">
             <div class="tag">You're the SME</div>
             <p>You bring the <strong>domain knowledge</strong>. AI handles the technical side. That combination is what makes Birmingham worthwhile.</p>
+          </div>
+          <div class="point reveal">
+            <div class="tag">Birmingham is f2f for a reason</div>
+            <p>Collaborative experimentation only works <strong>in the room</strong>. Pair up. Steal ideas. Test out loud. The day is built for it.</p>
           </div>
         </div>
       </div>
@@ -294,6 +384,35 @@
             <p class="mean">Rip the plaster off. <strong>Register for one tool</strong>. The hesitation goes once you've used something for ten minutes. That confidence is half the point.</p>
           </div>
         </div>
+      </div>
+
+      <!-- Why external tools? -->
+      <div class="why-external reveal">
+        <div class="why-card q">
+          <h3>Why are we asking you to use external tools?</h3>
+          <p>Inside the bank, you have Copilot. That's it. It's safe, sanctioned, and useful — but it's a sliver of what AI can do.</p>
+          <p>The wider world has tools that <strong>plan, build, and reason</strong> in ways Copilot doesn't. If you only ever use Copilot, you only ever see one tenth of the field.</p>
+        </div>
+        <div class="why-card a">
+          <h3>What we get out of it</h3>
+          <p><strong>Awareness.</strong> You can't shape the bank's AI roadmap if you've never seen what's possible elsewhere.</p>
+          <p><strong>Skill.</strong> Your ability to brief, plan, and judge AI output is the rare capability — and it transfers back to Copilot, to your day job, to every problem after this.</p>
+          <p><strong>Evidence.</strong> When you've built something outside, you can stand in front of senior people and say <em>"this is possible — here it is working."</em></p>
+        </div>
+      </div>
+
+      <!-- Bring to Birmingham checklist -->
+      <div class="birmingham-list reveal">
+        <h3>What to bring to Birmingham</h3>
+        <p class="sub">The day works when you arrive prepared. This is the prep list.</p>
+        <ul>
+          <li><strong>One problem</strong> you actually understand from your day job — manual, slow, or repetitive.</li>
+          <li><strong>A first attempt at articulating it</strong> in one sentence. Rough is fine.</li>
+          <li><strong>An account</strong> on at least one external tool, already logged in.</li>
+          <li><strong>An open mind</strong> about pairing with someone whose problem isn't yours.</li>
+          <li><strong>The mindset</strong> that we're showing what's possible — not delivering a launch.</li>
+          <li><strong>Curiosity</strong>. Nothing else is required.</li>
+        </ul>
       </div>
 
       <div style="text-align: center; margin-top: 3rem;" class="reveal">
